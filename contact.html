@@ -30,34 +30,22 @@
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
   <style>
-    /* Extra styles for contact section responsiveness */
-@media (max-width: 992px) {
-  .contact-section iframe {
-    width: 100% !important;
-    height: 300px !important;
-  }
-}
+    /* Styles for Contact Section Responsiveness */
 
-@media (max-width: 768px) {
-  .contact-section h1 {
-    font-size: 1.8rem;
-  }
+    /* By default, the map column should have a min-height.
+       The .h-100 class on the child div and the position classes on the iframe
+       will make the map fill this space. */
+    .contact-section .col-lg-6:first-child {
+      min-height: 450px;
+    }
 
-  .contact-section .btn {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-section form .form-floating {
-    font-size: 0.9rem;
-  }
-
-  .contact-section iframe {
-    height: 250px !important;
-  }
-}
-
+    /* On tablets and smaller devices where columns stack,
+       reduce the map's height for a better layout. */
+    @media (max-width: 991.98px) {
+      .contact-section .col-lg-6:first-child {
+        min-height: 350px;
+      }
+    }
   </style>
 </head>
 
@@ -163,14 +151,14 @@
   <!-- Page Header End -->
 
   <!-- Contact Start -->
-  <div class="container-xxl py-6">
+  <div class="container-xxl py-6 contact-section">
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 450px">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
           <div class="position-relative h-100">
-            <iframe
+            <iframe class="position-absolute w-100 h-100"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.320931697545!2d73.7863148806287!3d18.604629337396393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b90324b3d3f1%3A0xa5502a333589504d!2sDP%20Rd%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411027!5e0!3m2!1sen!2sin!4v1745317100260!5m2!1sen!2sin"
-              width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              style="border: 0" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
@@ -289,7 +277,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          &copy; <a href="#">Skills UP India</a>, All Right Reserved.
+          © <a href="#">Skills UP India</a>, All Right Reserved.
         </div>
         <div class="col-md-6 text-center text-md-end">
           <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
