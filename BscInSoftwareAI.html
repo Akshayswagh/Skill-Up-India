@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>B.Sc. in Software Development (AI) - Skills Up India</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Software Development, AI Specialization, Artificial Intelligence, Machine Learning, B.Sc. Degree" name="keywords" />
+    <meta content="Join the B.Sc. in Software Development – AI Specialization. A 3-year program focused on AI, machine learning, cloud computing, and full-stack development." name="description" />
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --ivory-white: #fffff5;
+        --faint-yellow: #fff9e6;
+        --gold-accent: #f3bd00 !important;
+        --dark-charcoal: #333333;
+        --light-gray: #f5f5f5;
+        --text-gray: #555555;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Custom CSS for Courses Page */
+      .course-level-card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .course-level-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+      
+      .degree-card {
+        border-top: 4px solid #6f42c1;
+      }
+
+      .course-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px 10px;
+        border-radius: 20px;
+      }
+
+      .course-img-overlay {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+      }
+
+      .course-img-overlay img {
+        transition: all 0.5s ease;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .course-level-card:hover .course-img-overlay img {
+        transform: scale(1.1);
+      }
+
+      .course-features-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .course-features-list li {
+        padding: 5px 0;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .course-features-list li:before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: #0d6efd;
+      }
+
+      /* Custom styling for accordion buttons to match theme */
+      .accordion-button {
+        background-color: #f8f9fa;
+        font-weight: 600;
+      }
+      .accordion-button:not(.collapsed) {
+        color: #000;
+        background-color: var(--faint-yellow);
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+      }
+      .accordion-button:focus {
+        box-shadow: 0 0 0 0.25rem rgba(243, 189, 0, 0.25);
+      }
+
+      @media (max-width: 767.98px) {
+        .course-img-overlay {
+          height: 150px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small>
+            <small>123 Street, New York, USA</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <small class="far fa-clock text-primary me-2"></small>
+            <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+012 345 6789</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-square btn-link rounded-0" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
+      >
+        <h2><img src="img/logo.png" alt="" /></h2>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Programs</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="programOverview.html" class="dropdown-item"
+                >Program Overview</a
+              >
+              <a href="course.html" class="dropdown-item active"
+                >Courses Offered</a
+              >
+              
+              <a href="facultyDetails.html" class="dropdown-item"
+                >Faculty Details</a
+              >
+            </div>
+          </div>
+          <a href="admission.html" class="nav-item nav-link">Admission</a>
+          <a href="studentLife.html" class="nav-item nav-link">Student Life</a>
+          <a href="industryCollaborations.html" class="nav-item nav-link"
+            >Industry</a
+          >
+          <!-- <a href="newsUpdate.html" class="nav-item nav-link">News</a> -->
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center">
+        <h1 class="display-4 text-white animated slideInDown mb-4">Courses</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="course.html">Courses</a>
+            </li>
+            <li class="breadcrumb-item text-primary active" aria-current="page">
+              B.Sc. in Software Development (AI)
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    
+
+
+    <!-- ================== START: NEW CONTENT ================== -->
+    <div class="container-xxl pt-2 pb-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="display-6 mb-4">B.Sc. Degree in Software Development – AI Specialization</h1>
+            </div>
+
+            <!-- Why Choose Section -->
+            <div class="row g-5 mb-5">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="mb-3">Why Choose a Degree in Software Development – AI Specialization?</h3>
+                    <p class="mb-4">Artificial Intelligence (AI) is reshaping industries by enabling automation, enhancing decision-making, and revolutionizing human-computer interactions. A B.Sc. in Software Development – AI Specialization prepares students to develop intelligent applications, implement machine learning models, and build scalable AI-driven solutions for sectors such as healthcare, finance, robotics, cyber security, and more.</p>
+                    <p>Aligned with NEP 2020, this program integrates multidisciplinary learning, hands-on coding, industry projects, and AI-driven innovations, ensuring students graduate with cutting-edge technical skills and industry readiness.</p>
+                </div>
+            </div>
+
+            <!-- What You Will Learn Section -->
+            <div class="row g-5 mb-5">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <h3 class="mb-3">What Will You Learn in the Program?</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i>Core Software Development Principles & Programming</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i>Artificial Intelligence, Machine Learning & Deep Learning</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i>Big Data Analytics, Cloud Computing & DevOps</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i>AI-Powered Web & Mobile Application Development</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i>AI Ethics, Responsible AI & Cyber security</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i>Industry Projects, Internships & Research in AI</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Curriculum Overview -->
+            <div class="row g-5 mb-5">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="mb-3">Curriculum Overview</h3>
+                    <p>The B.Sc. in Software Development – AI Specialization is a three-year undergraduate program with a choice-based credit system (CBCS) as per NEP 2020.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-star text-primary me-2"></i><strong>Total Credits per Semester:</strong> 20</li>
+                        <li><i class="fa fa-star text-primary me-2"></i><strong>Subjects per Semester:</strong> 5 (100 marks each)</li>
+                        <li><i class="fa fa-star text-primary me-2"></i><strong>Project/Internship per Semester:</strong> 1 (200 marks)</li>
+                    </ul>
+                    <p class="mt-3">Each semester blends theoretical foundations, hands-on programming, and real-world AI applications to develop highly skilled AI software developers.</p>
+                </div>
+            </div>
+
+            <!-- Semester Accordion -->
+            <div class="wow fadeInUp" data-wow-delay="0.5s">
+                <h2 class="text-center mb-5">Semester-wise Curriculum</h2>
+                <div class="accordion" id="curriculumAccordion">
+
+                    <!-- Semester 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Semester 1: Foundations of Software Development & AI
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Focus:</strong> Programming Fundamentals, AI Basics & Data Handling</p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="table-dark">
+                                            <tr><th>Subjects</th><th>Topics Covered</th><th>Learning Objectives</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Contemporary English – 1</td><td></td><td></td></tr>
+                                            <tr><td>Programming Fundamentals in Python & Java</td><td>OOP Concepts, Data Structures, Algorithms</td><td>Master Python & Java for AI applications</td></tr>
+                                            <tr><td>Introduction to Artificial Intelligence</td><td>AI History, AI vs. ML vs. DL, Real-World Use Cases</td><td>Understand fundamentals of AI & its applications</td></tr>
+                                            <tr><td>Data Structures & Algorithms</td><td>Linked Lists, Trees, Graphs, Sorting & Searching</td><td>Develop problem-solving skills with algorithms</td></tr>
+                                            <tr><td>Mathematics for AI & Data Science</td><td>Linear Algebra, Probability, Statistics</td><td>Build a mathematical foundation for AI models</td></tr>
+                                            <tr><td>Database Management Systems (SQL & NoSQL)</td><td>MySQL, MongoDB, Data Normalization</td><td>Learn efficient data storage & management</td></tr>
+                                            <tr><td>Project/Internship</td><td>AI Chatbot Development</td><td>Build a basic chatbot using Python & NLP techniques</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semester 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Semester 2: Machine Learning & Advanced Software Engineering
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Focus:</strong> Supervised & Unsupervised Learning, Full-Stack Development</p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="table-dark">
+                                            <tr><th>Subjects</th><th>Topics Covered</th><th>Learning Objectives</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Contemporary English – 2</td><td></td><td></td></tr>
+                                            <tr><td>Machine Learning Algorithms</td><td>Regression, Classification, Clustering</td><td>Train ML models using real-world datasets</td></tr>
+                                            <tr><td>Full-Stack Web Development (MERN Stack)</td><td>React.js, Express.js, Node.js, MongoDB</td><td>Develop dynamic AI-powered web applications</td></tr>
+                                            <tr><td>API Development & Microservices</td><td>RESTful APIs, GraphQL, Kubernetes</td><td>Implement scalable AI-driven microservices</td></tr>
+                                            <tr><td>Software Development Lifecycle & DevOps</td><td>CI/CD, Docker, GitHub Actions</td><td>Understand modern software engineering practices</td></tr>
+                                            <tr><td>Ethics & Responsible AI Development</td><td>Bias in AI, Fairness, AI Regulations</td><td>Learn AI governance & ethical deployment</td></tr>
+                                            <tr><td>Project/Internship</td><td>AI-Powered Web Application</td><td>Develop a web app with ML-powered recommendations</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semester 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Semester 3: Deep Learning & Cloud AI Services
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Focus:</strong> Neural Networks, Cloud Deployment & Scalable AI Solutions</p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="table-dark">
+                                            <tr><th>Subjects</th><th>Topics Covered</th><th>Learning Objectives</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Interactive Skills Part 1</td><td></td><td></td></tr>
+                                            <tr><td>Deep Learning with TensorFlow & PyTorch</td><td>CNNs, RNNs, LSTMs, Transformers</td><td>Train deep learning models for AI applications</td></tr>
+                                            <tr><td>Big Data Analytics & Cloud AI</td><td>Hadoop, Spark, AWS AI, Google Vertex AI</td><td>Learn data processing for AI in cloud environments</td></tr>
+                                            <tr><td>NLP & Speech Recognition</td><td>Sentiment Analysis, Speech-to-Text</td><td>Build AI-powered chatbots & voice assistants</td></tr>
+                                            <tr><td>Mobile App Development with AI</td><td>AI in Android & iOS, Flutter, TensorFlow Lite</td><td>Develop AI-integrated mobile applications</td></tr>
+                                            <tr><td>Data Visualization & AI Insights</td><td>Tableau, Power BI, Matplotlib</td><td>Master data-driven storytelling</td></tr>
+                                            <tr><td>Project/Internship</td><td>Image Recognition AI Model</td><td>Build a deep learning model for object detection</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Semester 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Semester 4: AI for Robotics, IoT & Cybersecurity
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Focus:</strong> AI in Robotics, Smart Devices & Cybersecurity</p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="table-dark">
+                                            <tr><th>Subjects</th><th>Topics Covered</th><th>Learning Objectives</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Interactive Skills Part 2</td><td></td><td></td></tr>
+                                            <tr><td>AI in Robotics & IoT</td><td>Edge AI, Arduino, Raspberry Pi, Smart Sensors</td><td>Develop AI-driven IoT applications</td></tr>
+                                            <tr><td>Cybersecurity & AI for Threat Detection</td><td>Ethical Hacking, AI-Powered Security Systems</td><td>Implement AI for intrusion detection & security</td></tr>
+                                            <tr><td>Computer Vision & Image Processing</td><td>Face Recognition, Object Detection</td><td>Train computer vision models for automation</td></tr>
+                                            <tr><td>Blockchain & AI for Secure Transactions</td><td>Smart Contracts, AI-Powered Crypto Analysis</td><td>Explore AI applications in blockchain security</td></tr>
+                                            <tr><td>AI Model Optimization & Performance Tuning</td><td>Hyperparameter Tuning, Model Compression</td><td>Optimize AI models for efficiency & speed</td></tr>
+                                            <tr><td>Project/Internship</td><td>AI-Driven Cybersecurity Solution</td><td>Develop an AI-powered fraud detection system</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semester 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Semester 5: AI Product Development & Business Intelligence
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Focus:</strong> AI Startup Ecosystem, Cloud Computing & Business Analytics</p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="table-dark">
+                                            <tr><th>Subjects</th><th>Topics Covered</th><th>Learning Objectives</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Personality Development</td><td></td><td></td></tr>
+                                            <tr><td>AI in Business Intelligence & Decision Making</td><td>Predictive Analytics, AI in FinTech</td><td>Implement AI for business decision support</td></tr>
+                                            <tr><td>AI Startup & Entrepreneurship</td><td>Business Models, AI SaaS, Funding Strategies</td><td>Learn how to build & scale AI startups</td></tr>
+                                            <tr><td>Autonomous Systems & Self-Learning AI</td><td>Reinforcement Learning, Self-Optimizing AI</td><td>Develop AI models that learn from interactions</td></tr>
+                                            <tr><td>Quantum Computing & Future AI</td><td>Quantum Algorithms, AI-Quantum Synergy</td><td>Explore AI applications in quantum computing</td></tr>
+                                            <tr><td>AI & Sustainability</td><td>AI for Climate Prediction, Green AI</td><td>Apply AI for environmental & sustainability goals</td></tr>
+                                            <tr><td>Project/Internship</td><td>AI-Based Business Solution</td><td>Develop an AI-driven SaaS product</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semester 6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Semester 6: Capstone Project & Industry Exposure
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Focus:</strong> Final AI Project, Career Readiness & Research</p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="table-dark">
+                                            <tr><th>Subjects</th><th>Topics Covered</th><th>Learning Objectives</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Interview Preparation & Essential Job Skills</td><td></td><td></td></tr>
+                                            <tr><td>Explainable AI (XAI) & AI Governance</td><td>AI Auditing, Transparency in AI</td><td>Learn best practices for interpretable AI models</td></tr>
+                                            <tr><td>AI & Human-Computer Interaction (HCI)</td><td>Conversational AI, Gesture-Based AI</td><td>Develop interactive AI systems</td></tr>
+                                            <tr><td>AI in Healthcare & Biomedicine</td><td>Disease Prediction, AI Drug Discovery</td><td>Build AI applications for healthcare solutions</td></tr>
+                                            <tr><td>Industry Masterclasses & Networking</td><td>Tech Talks, AI Research Panels</td><td>Gain first-hand insights from AI industry leaders</td></tr>
+                                            <tr><td>Final Capstone Project</td><td>AI Innovation Challenge</td><td>Build & present a disruptive AI product</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Outcomes Section -->
+            <div class="row g-5 mt-5">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <h3 class="mb-3">Program Outcomes (Aligned with NEP 2020)</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i><strong>Multidisciplinary Learning:</strong> AI integrated with software, cloud & business</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i><strong>Industry-Ready Skills:</strong> Hands-on exposure in AI, ML, IoT & cybersecurity</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i><strong>Global Career Opportunities:</strong> Aligned with latest AI industry demands</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fa fa-check text-primary me-2"></i><strong>Startup & Research Focus:</strong> Training in AI product development & business models</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================== END: NEW CONTENT ================== -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h2 class="text-primary mb-4">
+              <img src="img/logo.png" alt="" />
+            </h2>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>Corporate Office: Plot
+              no. 20, "Vihaan" Office No 201, Pimple Nilakh, Vishal Nagar, D P
+              Road, Pune - 411027
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i> +91 7888000951
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i> support@skillsupindia.com
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="index.html">Home</a>
+            <a class="btn btn-link" href="about.html">About us</a>
+            <a class="btn btn-link" href="admission.html">Admission</a>
+            <!-- <a class="btn btn-link" href="newsUpdate.html">News & Updates</a> -->
+            <a class="btn btn-link" href="contact.html">Contact</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Popular Links</h4>
+            <a class="btn btn-link" href="programOverview.html">Program</a>
+            <a class="btn btn-link" href="course.html">Courses</a>
+            <a class="btn btn-link" href="careerProspects.html">Career</a>
+            <a class="btn btn-link" href="facultyDetails.html">Faculty</a>
+            <a class="btn btn-link" href="studentLife.html">Student Life</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <form action="">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control p-3 border-0"
+                  placeholder="Your Email Address"
+                />
+                <button class="btn btn-primary">Sign Up</button>
+              </div>
+            </form>
+            <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-0" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div
+      class="container-fluid copyright text-light py-4 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            © <a href="#">Skills UP India</a>, All Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            Designed By <a href="https://htmlcodex.com">GPT Software</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

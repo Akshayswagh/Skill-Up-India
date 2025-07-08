@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Skills Up India</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+
+  <!-- Favicon -->
+  <link href="img/logo.png" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    .news-section {
+      padding: 50px 20px;
+      /* background: linear-gradient(to right, #d4b527, #eee); */
+      color: #fff;
+      text-align: center;
+    }
+
+    .news-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .news-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px 0;
+      gap: 10px;
+    }
+
+    .news-tab {
+      padding: 10px 20px;
+      background: #c2bb8930;
+      color: black;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .news-tab.active {
+      background: #eeae0b;
+      color: black;
+    }
+
+    .news-container {
+      display: none;
+      max-width: 1000px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .news-container.active {
+      display: block;
+    }
+
+    .news-card {
+      background: #fff;
+      color: #333;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 15px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .news-img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .news-content {
+      flex: 1;
+    }
+
+    .news-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .news-date {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .news-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .news-content {
+        padding-top: 10px;
+      }
+    }
+
+    /*  */
+
+    .blog-section {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .blog-section h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .blog-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .blog-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #0077cc;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .blog-btn.active {
+      background: #005ea8;
+    }
+
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .blog-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .blog-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .blog-excerpt {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .blog-section h2 {
+        font-size: 28px;
+      }
+
+      .blog-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+    }
+
+    /*  */
+
+    .events-section {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .events-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .event-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+      text-align: left;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .event-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .event-details {
+      padding: 15px;
+    }
+
+    .event-title {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #004080;
+    }
+
+    .event-info {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .event-mode {
+      font-weight: bold;
+      color: #008000;
+    }
+
+    @media (max-width: 600px) {
+      .events-section h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-dark text-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-7 px-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-map-marker-alt text-primary me-2"></small>
+          <small>Office No 201, Pimple Nilakh, Pune</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <small class="far fa-clock text-primary me-2"></small>
+          <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+        </div>
+      </div>
+      <div class="col-lg-5 px-5 text-end">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-phone-alt text-primary me-2"></small>
+          <small>+91 7888000951</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center mx-n2">
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+              class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+              class="fab fa-twitter"></i></a>
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+              class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+      <!-- <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>Drivin</h2> -->
+      <h2><img src="img/logo.png" alt="" /></h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Programs</a>
+          <div class="dropdown-menu bg-light m-0">
+            <a href="programOverview.html" class="dropdown-item">Program Overview</a>
+            <a href="course.html" class="dropdown-item">Courses Offered</a>
+           
+            <a href="facultyDetails.html" class="dropdown-item">Faculty Details</a>
+          </div>
+        </div>
+
+        <a href="admission.html" class="nav-item nav-link">Admission</a>
+        <a href="studentLife.html" class="nav-item nav-link">StudentLife</a>
+        <a href="industryCollaborations.html" class="nav-item nav-link">Industry</a>
+        <!-- <a href="newsUpdate.html" class="nav-item nav-link active">News</a> -->
+
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+      </div>
+      <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+            >Get Started<i class="fa fa-arrow-right ms-3"></i
+          ></a> -->
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center">
+      <h1 class="display-4 text-white animated slideInDown mb-4">
+        News & Updates
+      </h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item">
+            <a class="text-white" href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="text-white" href="#">Pages</a>
+          </li>
+          <li class="breadcrumb-item text-primary active" aria-current="page">
+            News & Updates
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+  <!-- News & Updates Start -->
+  <section class="news-section">
+    <h2>Latest News</h2>
+    <div class="news-tabs">
+      <button class="news-tab active" onclick="showNews('fashion')">
+        Fashion Design
+      </button>
+      <button class="news-tab" onclick="showNews('interior')">
+        Interior Design
+      </button>
+      <button class="news-tab" onclick="showNews('software')">
+        Software Development
+      </button>
+    </div>
+
+    <div id="fashion" class="news-container active">
+      <div class="news-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY_819An5tpC5_VulWdrhUGVVM-d6HzIM738vN1WuLTSHX-PqTL3Zg00zDwrcQBXY7Gzw&usqp=CAU"
+          class="news-img" alt="Fashion News" />
+        <div class="news-content">
+          <div class="news-title">New York Fashion Week 2025 Coverage</div>
+          <div class="news-date">April 10, 2025</div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="https://assets.vogue.com/photos/65772e43ac8a86057b87afd1/master/w_2560%2Cc_limit/00-story%2520(2).jpg"
+          class="news-img" alt="Fashion Media" />
+        <div class="news-content">
+          <div class="news-title">
+            Institute's Collection Featured in Vogue
+          </div>
+          <div class="news-date">March 28, 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="interior" class="news-container">
+      <div class="news-card">
+        <img src="https://www.uia-architectes.org/wp-content/uploads/2022/04/GGW-banner-1024x538.jpg" class="news-img"
+          alt="Interior News" />
+        <div class="news-content">
+          <div class="news-title">
+            Students Design Sustainable Housing Project
+          </div>
+          <div class="news-date">April 5, 2025</div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="https://foyr.com/learn/wp-content/uploads/2019/04/sustainable-architecture-design-ideas-scaled.jpg"
+          class="news-img" alt="Interior Media" />
+        <div class="news-content">
+          <div class="news-title">
+            Featured in 'Architectural Digest India'
+          </div>
+          <div class="news-date">March 22, 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="software" class="news-container">
+      <div class="news-card">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D5612AQH5QB_EUVTqbg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697544722975?e=2147483647&v=beta&t=2QK0_KzD3a6VdO4t_9Ws3APwoM1fSxSIcBGyXUTllPg"
+          class="news-img" alt="Software News" />
+        <div class="news-content">
+          <div class="news-title">Institute Hosts Global Hackathon</div>
+          <div class="news-date">April 12, 2025</div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="https://t3.ftcdn.net/jpg/03/27/84/86/360_F_327848677_rKdWq48QDo8apoN6kZlWa241HRlw5aWn.jpg"
+          class="news-img" alt="Software Media" />
+        <div class="news-content">
+          <div class="news-title">Alumni Startup Raises $2M Seed Funding</div>
+          <div class="news-date">March 30, 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  News & Updates  End -->
+
+  <!--Blog & Articles-->
+  <section class="blog-section">
+    <h2>Blog & Articles</h2>
+    <div class="blog-filters">
+      <button class="blog-btn active" onclick="filterBlogs('all')">
+        All
+      </button>
+      <button class="blog-btn" onclick="filterBlogs('skill')">
+        Skill Development
+      </button>
+      <button class="blog-btn" onclick="filterBlogs('design')">
+        Design Trends
+      </button>
+      <button class="blog-btn" onclick="filterBlogs('tech')">
+        Tech Trends
+      </button>
+    </div>
+
+    <div class="blog-container">
+      <!-- Blog 1 -->
+      <div class="blog-card" data-category="skill">
+        <img src="https://s29814.pcdn.co/wp-content/uploads/2024/01/new-skills-for-the-age-of-ai-scaled.jpg.optimal.jpg"
+          alt="Skill Blog" />
+        <div class="blog-content">
+          <div class="blog-title">
+            5 Ways to Improve Your Creative Thinking
+          </div>
+          <p class="blog-excerpt">
+            Learn how to unlock your creativity with exercises used by top
+            designers.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="blog-card" data-category="design">
+        <img
+          src="https://cdn-bnokp.nitrocdn.com/QNoeDwCprhACHQcnEmHgXDhDpbEOlRHH/assets/images/optimized/rev-230fda2/www.decorilla.com/online-decorating/wp-content/uploads/2024/06/Color-drenched-monochrome-room-interior-design-color-trends-2025-by-Decorilla-1024x683-345x194.jpg"
+          alt="Design Blog" />
+        <div class="blog-content">
+          <div class="blog-title">Interior Design Trends for 2025</div>
+          <p class="blog-excerpt">
+            From earthy tones to modular spaces, see what’s shaping the future
+            of interiors.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="blog-card" data-category="tech">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYypFTFtD5eX6290ayWyQPMxp55xRz-RjaLQ&s"
+          alt="Tech Blog" />
+        <div class="blog-content">
+          <div class="blog-title">The Rise of AI in Design</div>
+          <p class="blog-excerpt">
+            AI is changing how we build, sketch, and prototype. Discover
+            what's coming next.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 4 -->
+      <div class="blog-card" data-category="skill">
+        <img src="https://professional.dce.harvard.edu/wp-content/uploads/sites/9/2023/10/Tech-Communications.jpg"
+          alt="Skill Blog" />
+        <div class="blog-content">
+          <div class="blog-title">
+            Communication Skills for Tech Professionals
+          </div>
+          <p class="blog-excerpt">
+            Boost your career by mastering the art of clear, impactful
+            communication.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog 5 -->
+      <div class="blog-card" data-category="design">
+        <img
+          src="https://i.ytimg.com/vi/FllVu_W6uMI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDwaMlYqdWUEncA3n_R6WrVdoBpPg"
+          alt="Design Blog" />
+        <div class="blog-content">
+          <div class="blog-title">Fashion Forecast 2025: What's Hot?</div>
+          <p class="blog-excerpt">
+            Designers are blending digital and sustainable concepts like never
+            before.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Upcoming Events-->
+  <section class="events-section">
+    <h2>Upcoming Events: Seminars, Webinars, Workshops</h2>
+    <div class="events-container">
+      <!-- Seminar -->
+      <div class="event-card">
+        <img src="https://www.shutterstock.com/image-photo/young-asian-woman-leading-business-260nw-1683708379.jpg"
+          alt="Seminar" class="event-img" />
+        <div class="event-details">
+          <div class="event-title">Fashion Design</div>
+          <div class="event-info">Date: May 10, 2025</div>
+          <div class="event-info">Time: 10:00 AM - 1:00 PM</div>
+          <div class="event-info">
+            Mode: <span class="event-mode">Offline</span> (Campus Auditorium)
+          </div>
+        </div>
+      </div>
+
+      <!-- Webinar -->
+      <div class="event-card">
+        <img src="https://zicanagpur.com/wp-content/uploads/2022/02/Interior-Design.jpg" alt="Webinar"
+          class="event-img" />
+        <div class="event-details">
+          <div class="event-title">Design, Interior Design</div>
+          <div class="event-info">Date: May 18, 2025</div>
+          <div class="event-info">Time: 4:00 PM - 6:00 PM</div>
+          <div class="event-info">
+            Mode: <span class="event-mode">Online</span> (Zoom)
+          </div>
+        </div>
+      </div>
+
+      <!-- Workshop -->
+      <div class="event-card">
+        <img src="https://chariotsolutions.com/wp-content/uploads/2021/02/design-for-developers-workshop-1024x682-1.jpg"
+          alt="Workshop" class="event-img" />
+        <div class="event-details">
+          <div class="event-title">Software Development Workshop</div>
+          <div class="event-info">Date: June 2, 2025</div>
+          <div class="event-info">Time: 9:00 AM - 5:00 PM</div>
+          <div class="event-info">
+            Mode: <span class="event-mode">Offline</span> (Lab Hall A)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <!-- <h4 class="text-white mb-4">Get In Touch</h4> -->
+          <h2 class="text-primary mb-4">
+            <img src="img/logo.png" alt="" />
+          </h2>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>Corporate Office: Plot
+            no. 20, "Vihaan" Office No 201, Pimple Nilakh, Vishal Nagar, D P
+            Road, Pune - 411027
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i> +91 7888000951
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i> support@skillsupindia.com
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">Quick Links</h4>
+          <a class="btn btn-link" href="index.html">Home</a>
+          <a class="btn btn-link" href="about.html">About us</a>
+          <a class="btn btn-link" href="admission.html">Admission</a>
+          <a class="btn btn-link" href="newsUpdate.html">News & Updates</a>
+          <a class="btn btn-link" href="contact.html">Contact</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">Popular Links</h4>
+          <a class="btn btn-link" href="programOverview.html">Program</a>
+          <a class="btn btn-link" href="course.html">Courses</a>
+          <a class="btn btn-link" href="careerProspects.html">Career</a>
+          <a class="btn btn-link" href="facultyDetails.html">Faculty</a>
+          <a class="btn btn-link" href="studentLife.html">Student Life</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <!-- <h4 class="text-light mb-4">Newsletter</h4> -->
+          <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address" />
+              <button class="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+          <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+          <div class="d-flex pt-2">
+            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-square btn-outline-light me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Copyright Start -->
+  <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a href="#">Skills UP India</a>, All Right Reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+          Designed By <a href="https://htmlcodex.com">GPT Software</a>
+          <!-- <br />Distributed By:
+              <a href="https://themewagon.com" target="_blank">name</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <script>
+    function showNews(tabId) {
+      const tabs = document.querySelectorAll(".news-tab");
+      const containers = document.querySelectorAll(".news-container");
+
+      tabs.forEach((tab) => tab.classList.remove("active"));
+      containers.forEach((c) => c.classList.remove("active"));
+
+      document.getElementById(tabId).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+  <script>
+    function filterBlogs(category) {
+      const cards = document.querySelectorAll(".blog-card");
+      const buttons = document.querySelectorAll(".blog-btn");
+
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      event.target.classList.add("active");
+
+      cards.forEach((card) => {
+        const cat = card.getAttribute("data-category");
+        card.style.display =
+          category === "all" || cat === category ? "block" : "none";
+      });
+    }
+  </script>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Skills Up India</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+
+  <!-- Favicon -->
+  <link href="img/logo.png" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    .section {
+      /* background: linear-gradient(135deg, #f5c518, #fff); */
+      color: #fff;
+      padding: 50px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #ffffff;
+      color: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #747a82;
+    }
+
+    .card-content p {
+      margin-bottom: 0;
+    }
+
+    header {
+      /* background: #f3bd00; */
+      color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+      color: whit;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      /* background: #0c2b4b; */
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 1rem 2rem;
+      cursor: pointer;
+      background: #ddd;
+      border: none;
+      outline: none;
+      margin: 0.2rem;
+      border-radius: 6px;
+    }
+
+    .tab.active {
+      background: #f38200;
+      font-weight: bold;
+      border-bottom: 2px solid #333;
+    }
+
+    .content {
+      padding: 1rem 2rem;
+    }
+
+    .section {
+      margin-top: 1.5rem;
+      margin: 50px;
+    }
+
+    .event-card {
+      background: #fff;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .event-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .event-details {
+      flex: 1;
+    }
+
+    .event-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: rgb(61, 39, 117);
+    }
+
+    .event-date,
+    .event-mode {
+      color: #555;
+    }
+
+    .generate-btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .generate-btn:hover {
+      background-color: #555;
+    }
+
+    /* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+    @media (max-width: 768px) {
+      .section {
+        padding: 30px 10px;
+        margin: 20px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
+
+      .event-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .event-img {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+      }
+
+      .tab {
+        padding: 0.8rem 1rem;
+        font-size: 14px;
+      }
+
+      .generate-btn {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section h2 {
+        font-size: 24px;
+      }
+
+      .card-content h3 {
+        font-size: 18px;
+      }
+
+      .tab {
+        font-size: 13px;
+      }
+
+      .event-title {
+        font-size: 1rem;
+      }
+
+      .event-details {
+        min-width: 100%;
+      }
+    }
+
+    /*  */
+    .placement-section {
+      padding: 60px 20px;
+      /* background: linear-gradient(to right, #1e3c72, #2a5298); */
+      color: white;
+      text-align: center;
+    }
+
+    .placement-section h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .company-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .company-card {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .company-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .company-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .company-name {
+      font-weight: bold;
+    }
+
+    .generate-btn {
+      margin-top: 40px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #ff9500;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .generate-btn:hover {
+      background-color: #e67f00;
+    }
+
+    @media (max-width: 600px) {
+      .placement-section h2 {
+        font-size: 28px;
+      }
+
+      .generate-btn {
+        width: 100%;
+        font-size: 18px;
+      }
+    }
+
+    /*  */
+
+    .alumni-section {
+      padding: 60px 20px;
+      /* background: linear-gradient(135deg, #e4b311, #f6f7f9); */
+      color: #fff;
+      text-align: center;
+    }
+
+    .alumni-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .alumni-section p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .alumni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .alumni-card {
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-align: left;
+    }
+
+    .alumni-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .alumni-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .alumni-content {
+      padding: 20px;
+    }
+
+    .alumni-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
+
+    .alumni-role {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .alumni-story {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .connect-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #a29ba7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .connect-btn:hover {
+      background-color: #aba6b1;
+    }
+
+    @media (max-width: 600px) {
+      .alumni-section h2 {
+        font-size: 28px;
+      }
+
+      .alumni-section p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-dark text-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-7 px-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-map-marker-alt text-primary me-2"></small>
+          <small>Office No 201, Pimple Nilakh, Pune</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <small class="far fa-clock text-primary me-2"></small>
+          <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+        </div>
+      </div>
+      <div class="col-lg-5 px-5 text-end">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-phone-alt text-primary me-2"></small>
+          <small>+91 7888000951</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center mx-n2">
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+              class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+              class="fab fa-twitter"></i></a>
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+              class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+      <!-- <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>Drivin</h2> -->
+      <h2><img src="img/logo.png" alt="" /></h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Programs</a>
+          <div class="dropdown-menu bg-light m-0">
+            <a href="programOverview.html" class="dropdown-item">Program Overview</a>
+            <a href="course.html" class="dropdown-item">Courses Offered</a>
+          
+            <a href="facultyDetails.html" class="dropdown-item">Faculty Details</a>
+          </div>
+        </div>
+
+        <a href="admission.html" class="nav-item nav-link">Admission</a>
+        <a href="studentLife.html" class="nav-item nav-link active">Student Life</a>
+        <a href="industryCollaborations.html" class="nav-item nav-link">Industry</a>
+        <!-- <a href="newsUpdate.html" class="nav-item nav-link">News</a> -->
+
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+      </div>
+      <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+              >Get Started<i class="fa fa-arrow-right ms-3"></i
+            ></a> -->
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center">
+      <h1 class="display-4 text-white animated slideInDown mb-4">
+        Student Life
+      </h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item">
+            <a class="text-white" href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="text-white" href="#">Pages</a>
+          </li>
+          <li class="breadcrumb-item text-primary active" aria-current="page">
+            Student Life
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+  <!-- Student LifeStart -->
+  <h2 style="text-align: center">Campus Life</h2>
+  <p style="text-align: center">
+    Fashion Design, Interior Design, and Software Development. With a strong
+    emphasis on <br />practical learning and industry integration, the
+    institute offers a diverse range of programs, including:​
+  </p>
+  <section class="section">
+    <h4></h4>
+    <div class="grid">
+      <div class="card">
+        <img
+          src="https://www.futurefitouts.com.au/wp-content/uploads/2023/12/empty-school-classroom-with-green-chalkboard-1024x653.jpg"
+          alt="Classroom" />
+        <div class="card-content">
+          <h3>Classrooms</h3>
+          <p>
+            Smart classrooms equipped with the latest AV technology for
+            enhanced learning.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.universitylabpartners.org/hubfs/LabonaChip%202021.06.26.jpg" alt="Lab" />
+        <div class="card-content">
+          <h3>Labs</h3>
+          <p>
+            Well-equipped labs for practical, hands-on learning across
+            disciplines.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/SanDiegoCityCollegeLearningResource_-_bookshelf.jpg/1200px-SanDiegoCityCollegeLearningResource_-_bookshelf.jpg"
+          alt="Library" />
+        <div class="card-content">
+          <h3>Library</h3>
+          <p>
+            Extensive digital and physical resources with quiet study areas.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://s3-ap-south-1.amazonaws.com/uploaddocumentstomakeitpublic/wp-content/uploads/2024/09/03160434/PRAJ2599-1-1.jpg"
+          alt="Co-working space" />
+        <div class="card-content">
+          <h3>Co-working Spaces</h3>
+          <p>
+            Modern, flexible spaces to collaborate, innovate, and co-create
+            ideas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Events & Workshops-->
+  <header>
+    <h1>Events & Workshops</h1>
+    <p style="color: black">
+      Fashion Design, Interior Design, Software Development
+    </p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('fashion', this)">
+      Fashion Design
+    </button>
+    <button class="tab" onclick="showTab('interior', this)">
+      Interior Design
+    </button>
+    <button class="tab" onclick="showTab('software', this)">
+      Software Development
+    </button>
+  </div>
+
+  <!-- Fashion Design -->
+  <div id="fashion" class="content">
+    <div class="section">
+      <h2>Upcoming Events</h2>
+      <div class="event-card">
+        <img src="https://www.sptbgfashionweek.com/cdn/shop/files/modelworkshoppostflyer.jpg?v=1734636095"
+          class="event-img" alt="Fashion Event" />
+        <div class="event-details">
+          <div class="event-title">Fashion Week Workshop</div>
+          <div class="event-date">May 10, 2025 | 10:00 AM</div>
+          <div class="event-mode">Mode: Offline</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Past Events</h2>
+      <div class="event-card">
+        <img src="https://images.303magazine.com/uploads/2022/07/Model-Workshop.jpg" class="event-img"
+          alt="Textile Trends" />
+        <div class="event-details">
+          <div class="event-title">Textile Trends 2024</div>
+          <div class="event-date">Oct 12, 2024 | 2:00 PM</div>
+          <div class="event-mode">Mode: Online</div>
+        </div>
+      </div>
+    </div>
+    <button class="generate-btn">Generate Fashion Event</button>
+  </div>
+
+  <!-- Interior Design -->
+  <div id="interior" class="content" style="display: none">
+    <div class="section">
+      <h2>Upcoming Events</h2>
+      <div class="event-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCw3ec6DghdEguPWEU7SF6sLWuVXHglqdn4Q&s"
+          class="event-img" alt="Interior Event" />
+        <div class="event-details">
+          <div class="event-title">Modern Living Spaces</div>
+          <div class="event-date">June 5, 2025 | 1:00 PM</div>
+          <div class="event-mode">Mode: Offline</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Past Events</h2>
+      <div class="event-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNmTNB3Tr3Wff1X7DNNmmtcL3Ml9fFaH6Vfw&s"
+          class="event-img" alt="Eco Interiors" />
+        <div class="event-details">
+          <div class="event-title">Eco-Friendly Interiors</div>
+          <div class="event-date">Nov 2, 2024 | 11:00 AM</div>
+          <div class="event-mode">Mode: Online</div>
+        </div>
+      </div>
+    </div>
+    <button class="generate-btn">Generate Interior Event</button>
+  </div>
+
+  <!-- Software Development -->
+  <div id="software" class="content" style="display: none">
+    <div class="section">
+      <h2>Upcoming Events</h2>
+      <div class="event-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbi-UPYzn2Ipo3X0B9rSX5oIbwV6yiP9XDJQ&s"
+          class="event-img" alt="JS Bootcamp" />
+        <div class="event-details">
+          <div class="event-title">JavaScript Bootcamp</div>
+          <div class="event-date">July 20, 2025 | 3:00 PM</div>
+          <div class="event-mode">Mode: Online</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Past Events</h2>
+      <div class="event-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkiiCYNqUp85y58_VO7czwj9EvVlM8CFECRg&s"
+          class="event-img" alt="Frontend Fundamentals" />
+        <div class="event-details">
+          <div class="event-title">Frontend Fundamentals</div>
+          <div class="event-date">Jan 15, 2025 | 10:30 AM</div>
+          <div class="event-mode">Mode: Offline</div>
+        </div>
+      </div>
+    </div>
+    <button class="generate-btn">Generate Software Event</button>
+  </div>
+  <!--Events & Workshops end-->
+  <!-- Student Life End -->
+
+  <!--Internships & Placements-->
+  <section class="placement-section">
+    <h2>Internships & Placements</h2>
+    <div class="company-grid">
+      <div class="company-card">
+        <img src="https://the420.in/wp-content/uploads/2025/04/TCS.jpg" alt="Company 1 Logo" />
+        <div class="company-name">TCS</div>
+      </div>
+      <div class="company-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4s4vZ-BrNpvtp6mnj69IqyZhjB5oQTpxXAQ&s"
+          alt="Company 2 Logo" />
+        <div class="company-name">Accenture</div>
+      </div>
+      <div class="company-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMz2Xizh-BmbBC0R9fyhBUxblCNV8k_4dcrg&s"
+          alt="Company 3 Logo" />
+        <div class="company-name">Wipro</div>
+      </div>
+      <div class="company-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyScqUYp_Z4-y_t5SnC4zgucTtum5yuJUe0A&s"
+          alt="Company 4 Logo" />
+        <div class="company-name">Infosys</div>
+      </div>
+      <div class="company-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVEnkgPXAjlKdAROeiiGQdmT0pKYBmKPitVg&s"
+          alt="Company 5 Logo" />
+        <div class="company-name">Google</div>
+      </div>
+    </div>
+    <button class="generate-btn">Generate List</button>
+  </section>
+  <!--Internships & Placements end-->
+  <!--Alumni Network-->
+  <section class="alumni-section">
+    <h2>Alumni Network</h2>
+    <p style="color: black">
+      Explore success stories and connect with our inspiring alumni.
+    </p>
+
+    <div class="alumni-grid">
+      <div class="alumni-card">
+        <img
+          src="https://media.licdn.com/dms/image/v2/C5603AQG01UBEhsy5bg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1648886542174?e=2147483647&v=beta&t=ETYygoVBQ7QZ-LVmRb4zm0rb9X8MVJPPI1m76LL7PTw"
+          alt="Alumnus 1" class="alumni-img" />
+        <div class="alumni-content">
+          <div class="alumni-name">Priya Sharma</div>
+          <div class="alumni-role">Fation design @ Google</div>
+          <div class="alumni-story">
+            "The design courses here helped me land my dream job at Google.
+            The practical training made all the difference."
+          </div>
+          <a href="#" class="connect-btn">Connect</a>
+        </div>
+      </div>
+
+      <div class="alumni-card">
+        <img
+          src="https://media.licdn.com/dms/image/v2/C5603AQG01UBEhsy5bg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1648886542174?e=2147483647&v=beta&t=ETYygoVBQ7QZ-LVmRb4zm0rb9X8MVJPPI1m76LL7PTw"
+          alt="Alumnus 2" class="alumni-img" />
+        <div class="alumni-content">
+          <div class="alumni-name">Arjun Verma</div>
+          <div class="alumni-role">Software Engineer @ Amazon</div>
+          <div class="alumni-story">
+            "Learning Java and backend development here gave me the foundation
+            to succeed in interviews at top tech companies."
+          </div>
+          <a href="#" class="connect-btn">Connect</a>
+        </div>
+      </div>
+
+      <div class="alumni-card">
+        <img
+          src="https://media.licdn.com/dms/image/v2/C5603AQG01UBEhsy5bg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1648886542174?e=2147483647&v=beta&t=ETYygoVBQ7QZ-LVmRb4zm0rb9X8MVJPPI1m76LL7PTw"
+          alt="Alumnus 3" class="alumni-img" />
+        <div class="alumni-content">
+          <div class="alumni-name">Neha Raj</div>
+          <div class="alumni-role">Interior Architect @ Livspace</div>
+          <div class="alumni-story">
+            "From the very first workshop to portfolio building, this place
+            was a launchpad for my design career."
+          </div>
+          <a href="#" class="connect-btn">Connect</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <!-- <h4 class="text-white mb-4">Get In Touch</h4> -->
+          <h2 class="text-primary mb-4">
+            <img src="img/logo.png" alt="" />
+          </h2>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>Corporate Office: Plot
+            no. 20, "Vihaan" Office No 201, Pimple Nilakh, Vishal Nagar, D P
+            Road, Pune - 411027
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i> +91 7888000951
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i> support@skillsupindia.com
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">Quick Links</h4>
+          <a class="btn btn-link" href="index.html">Home</a>
+          <a class="btn btn-link" href="about.html">About us</a>
+          <a class="btn btn-link" href="admission.html">Admission</a>
+          <!-- <a class="btn btn-link" href="newsUpdate.html">News & Updates</a> -->
+          <a class="btn btn-link" href="contact.html">Contact</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">Popular Links</h4>
+          <a class="btn btn-link" href="programOverview.html">Program</a>
+          <a class="btn btn-link" href="course.html">Courses</a>
+          <a class="btn btn-link" href="careerProspects.html">Career</a>
+          <a class="btn btn-link" href="facultyDetails.html">Faculty</a>
+          <a class="btn btn-link" href="studentLife.html">Student Life</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <!-- <h4 class="text-light mb-4">Newsletter</h4> -->
+          <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address" />
+              <button class="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+          <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+          <div class="d-flex pt-2">
+            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-square btn-outline-light me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Copyright Start -->
+  <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a href="#">Skills UP India</a>, All Right Reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+          Designed By <a href="https://htmlcodex.com">GPT Software</a>
+          <!-- <br />Distributed By:
+              <a href="https://themewagon.com" target="_blank">name</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script>
+    function showTab(tabId, element) {
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".content");
+
+      tabs.forEach((tab) => tab.classList.remove("active"));
+      contents.forEach((content) => (content.style.display = "none"));
+
+      document.getElementById(tabId).style.display = "block";
+      element.classList.add("active");
+    }
+  </script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

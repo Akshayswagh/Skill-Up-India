@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Skills Up India</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --ivory-white: #fffff5;
+        --faint-yellow: #fff9e6;
+        --gold-accent: #f3bd00 !important;
+        --dark-charcoal: #333333;
+        --light-gray: #f5f5f5;
+        --text-gray: #555555;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .programs-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header Styles */
+      .programs-header {
+        background: linear-gradient(
+            rgba(255, 255, 245, 0.9),
+            rgba(255, 249, 230, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+            no-repeat center center;
+        background-size: cover;
+        padding: 120px 0 80px;
+        text-align: center;
+        position: relative;
+      }
+
+      .programs-header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background: linear-gradient(to right, var(--gold-accent), transparent);
+        opacity: 0.3;
+      }
+
+      .programs-main-title {
+        font-size: 3.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .programs-main-title::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        background: var(--gold-accent);
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .programs-intro-text {
+        max-width: 700px;
+        margin: 0 auto 30px;
+        font-size: 1.1rem;
+      }
+
+      /* Breadcrumb */
+      .programs-breadcrumb {
+        padding: 15px 0;
+        background-color: var(--faint-yellow);
+        border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+      }
+
+      .breadcrumb-list {
+        display: flex;
+        list-style: none;
+      }
+
+      .breadcrumb-item {
+        margin-right: 10px;
+        font-size: 0.9rem;
+      }
+
+      .breadcrumb-item:not(:last-child)::after {
+        content: "›";
+        margin-left: 10px;
+        color: var(--gold-accent);
+      }
+
+      .breadcrumb-link {
+        color: var(--text-gray);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .breadcrumb-link:hover {
+        color: var(--gold-accent);
+      }
+
+      /* Programs Filter */
+      .programs-filter-section {
+        padding: 40px 0;
+        background-color: var(--ivory-white);
+      }
+
+      .filter-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .filter-btn {
+        padding: 10px 25px;
+        background: transparent;
+        border: 1px solid var(--gold-accent);
+        border-radius: 30px;
+        color: var(--dark-charcoal);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--gold-accent);
+        color: white;
+      }
+
+      /* Programs Grid */
+      .programs-grid-section {
+        padding: 60px 0;
+        /* background-color: var(--faint-yellow); */
+      }
+
+      .programs-grid-title {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2.2rem;
+      }
+
+      .programs-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .program-card-uniq {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s ease;
+        position: relative;
+      }
+
+      .program-card-uniq:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .program-card-uniq::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--gold-accent);
+      }
+
+      .program-image-wrapper {
+        height: 220px;
+        overflow: hidden;
+      }
+
+      .program-img-uniq {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .program-card-uniq:hover .program-img-uniq {
+        transform: scale(1.05);
+      }
+
+      .program-content-box {
+        padding: 25px;
+      }
+
+      .program-title-special {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        color: var(--dark-charcoal);
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .program-title-special::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--gold-accent);
+      }
+
+      .program-description-custom {
+        margin-bottom: 20px;
+        color: var(--text-gray);
+      }
+
+      .program-details-list {
+        margin-bottom: 25px;
+      }
+
+      .program-detail-item {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .detail-icon-uniq {
+        color: #f3bd00 !important;
+        margin-right: 10px;
+        font-size: 0.9rem;
+        margin-top: 3px;
+      }
+
+      .program-cta-btn {
+        display: inline-block;
+        padding: 10px 25px;
+        background: #f3bd00 !important;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 1px solid var(--gold-accent);
+      }
+
+      .program-cta-btn:hover {
+        background: transparent;
+        color: var(--gold-accent);
+      }
+
+      /* Program Highlights */
+      .program-highlights-section {
+        padding: 80px 0;
+        /* background-color: var(--ivory-white); */
+      }
+
+      .highlight-container-flex {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .highlight-content-area {
+        flex: 1;
+      }
+
+      .highlight-visual-area {
+        flex: 1;
+        position: relative;
+      }
+
+      .highlight-main-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .highlight-main-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 70px;
+        height: 3px;
+        background: var(--gold-accent);
+      }
+
+      .highlight-point {
+        display: flex;
+        margin-bottom: 25px;
+      }
+
+      .highlight-icon-circle {
+        width: 50px;
+        height: 50px;
+        background: var(--faint-yellow);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        color: #f3bd00 !important;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+
+      .highlight-visual-area {
+        perspective: 1000px;
+      }
+
+      .floating-card-uniq {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        transform-style: preserve-3d;
+        animation: floatRotate 8s ease-in-out infinite;
+      }
+
+      @keyframes floatRotate {
+        0%,
+        100% {
+          transform: translateY(0) rotateY(-5deg);
+        }
+
+        50% {
+          transform: translateY(-20px) rotateY(5deg);
+        }
+      }
+
+      .floating-card-title {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        color: var(--gold-accent);
+      }
+
+      .floating-card-list {
+        list-style: none;
+      }
+
+      .floating-card-item {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .floating-card-item::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--gold-accent);
+        font-weight: bold;
+      }
+
+      /* Stats Section */
+      .program-stats-section {
+        padding: 60px 0;
+        background-color: var(--faint-yellow);
+        text-align: center;
+      }
+
+      .stats-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .stat-item-uniq {
+        padding: 30px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .stat-item-uniq:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--gold-accent);
+        margin-bottom: 10px;
+        font-family: "Playfair Display", serif;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        color: var(--text-gray);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .highlight-container-flex {
+          flex-direction: column;
+        }
+
+        .highlight-content-area,
+        .highlight-visual-area {
+          width: 100%;
+        }
+
+        .highlight-visual-area {
+          margin-top: 40px;
+        }
+
+        .programs-main-title {
+          font-size: 2.8rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .programs-main-title {
+          font-size: 2.2rem;
+        }
+
+        .programs-grid-container {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-title-gold {
+          font-size: 2rem;
+        }
+
+        .cta-btn-group {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .cta-btn-primary,
+        .cta-btn-secondary {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .programs-main-title {
+          font-size: 1.8rem;
+        }
+
+        .programs-header {
+          padding: 100px 0 60px;
+        }
+
+        .program-title-special {
+          font-size: 1.4rem;
+        }
+
+        .highlight-main-title {
+          font-size: 2rem;
+        }
+      }
+
+      /* Custom CSS for Courses Page */
+      .course-level-card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .course-level-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .certificate-card {
+        border-top: 4px solid #0d6efd;
+      }
+
+      .diploma-card {
+        border-top: 4px solid #fd7e14;
+      }
+
+      .advanced-diploma-card {
+        border-top: 4px solid #20c997;
+      }
+
+      .degree-card {
+        border-top: 4px solid #6f42c1;
+      }
+
+      .course-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px 10px;
+        border-radius: 20px;
+      }
+
+      .course-img-overlay {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+      }
+
+      .course-img-overlay img {
+        transition: all 0.5s ease;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .course-level-card:hover .course-img-overlay img {
+        transform: scale(1.1);
+      }
+
+      .course-duration {
+        background-color: rgba(13, 110, 253, 0.1);
+        color: #0d6efd;
+      }
+
+      .course-features-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .course-features-list li {
+        padding: 5px 0;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .course-features-list li:before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: #0d6efd;
+      }
+
+      .course-level-title {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .course-level-title:after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 3px;
+        background: #0d6efd;
+        bottom: -10px;
+        left: 0;
+      }
+
+      /* Custom styling for accordion buttons to match theme */
+      .accordion-button {
+        background-color: #f8f9fa;
+        font-weight: 600;
+      }
+      .accordion-button:not(.collapsed) {
+        color: #000;
+        background-color: var(--faint-yellow);
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+      }
+      .accordion-button:focus {
+        box-shadow: 0 0 0 0.25rem rgba(243, 189, 0, 0.25);
+      }
+
+      @media (max-width: 767.98px) {
+        .course-img-overlay {
+          height: 150px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small>
+            <small>123 Street, New York, USA</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <small class="far fa-clock text-primary me-2"></small>
+            <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+012 345 6789</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-square btn-link rounded-0" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
+      >
+        <!-- <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>Drivin</h2> -->
+        <h2><img src="img/logo.png" alt="" /></h2>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Programs</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="programOverview.html" class="dropdown-item"
+                >Program Overview</a
+              >
+              <a href="course.html" class="dropdown-item active"
+                >Courses Offered</a
+              >
+              
+              <a href="facultyDetails.html" class="dropdown-item"
+                >Faculty Details</a
+              >
+            </div>
+          </div>
+
+          <a href="admission.html" class="nav-item nav-link">Admission</a>
+          <a href="studentLife.html" class="nav-item nav-link">Student Life</a>
+          <a href="industryCollaborations.html" class="nav-item nav-link"
+            >Industry</a
+          >
+          <!-- <a href="newsUpdate.html" class="nav-item nav-link">News</a> -->
+
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+        >Get Started<i class="fa fa-arrow-right ms-3"></i
+      ></a> -->
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center">
+        <h1 class="display-4 text-white animated slideInDown mb-4">Courses</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="#">Courses</a>
+            </li>
+            <li class="breadcrumb-item text-primary active" aria-current="page">
+              B.Sc. Degree in Fashion Design
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- ================== START: NEW CONTENT ================== -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div
+          class="text-center mx-auto mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="max-width: 600px"
+        >
+          <h1 class="display-6 mb-4">B.Sc. Degree in Fashion Design</h1>
+        </div>
+
+        <!-- Why Choose Section -->
+        <div class="row g-5 mb-5">
+          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+            <h3 class="mb-3">Why Choose a Degree in Fashion Design?</h3>
+            <p class="mb-4">
+              Fashion is a dynamic and ever-evolving industry that blends
+              creativity, technology, and business acumen. A B.Sc. in Fashion
+              Design provides students with technical expertise, industry
+              exposure, and practical skills to thrive in the competitive world
+              of fashion.
+            </p>
+            <p>
+              Aligned with NEP 2020 guidelines, this program integrates
+              multidisciplinary learning, experiential education, and
+              industry-relevant skills. It incorporates fashion technology,
+              sustainability, digital fashion, and entrepreneurship to prepare
+              students for diverse career opportunities in the global fashion
+              industry.
+            </p>
+          </div>
+        </div>
+
+        <!-- What You Will Learn Section -->
+        <div class="row g-5 mb-5">
+          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+            <h3 class="mb-3">What Will You Learn in the Program?</h3>
+            <ul class="list-group">
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i>Fundamentals of
+                Fashion Design & Textile Science
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i>Illustration,
+                Pattern Making & Garment Construction
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i>Digital Fashion,
+                CAD & Emerging Technologies
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i>Sustainable Fashion
+                & Ethical Design Practices
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i>Fashion Business,
+                Merchandising & Entrepreneurship
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i>Hands-on Industry
+                Projects, Internships & Portfolio Development
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Curriculum Overview -->
+        <div class="row g-5 mb-5">
+          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+            <h3 class="mb-3">Curriculum Overview</h3>
+            <p>
+              The B.Sc. in Fashion Design is a three-year undergraduate program
+              with a choice-based credit system (CBCS) as per NEP 2020.
+            </p>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-star text-primary me-2"></i
+                ><strong>Total Credits per Semester:</strong> 20
+              </li>
+              <li>
+                <i class="fa fa-star text-primary me-2"></i
+                ><strong>Subjects per Semester:</strong> 5 (100 marks each)
+              </li>
+              <li>
+                <i class="fa fa-star text-primary me-2"></i
+                ><strong>Project/Internship per Semester:</strong> 1 (200 marks)
+              </li>
+            </ul>
+            <p class="mt-3">
+              Each semester combines core subjects, practical training, and
+              industry projects to ensure holistic skill development.
+            </p>
+          </div>
+        </div>
+
+        <!-- Semester Accordion -->
+        <div class="wow fadeInUp" data-wow-delay="0.5s">
+          <h2 class="text-center mb-5">Semester-wise Curriculum</h2>
+          <div class="accordion" id="curriculumAccordion">
+            <!-- Semester 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Semester 1: Fundamentals of Fashion Design & Textile Science
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#curriculumAccordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <strong>Focus:</strong> Introduction to Fashion, Design
+                    Principles & Textile Science
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-dark">
+                        <tr>
+                          <th>Subjects</th>
+                          <th>Topics Covered</th>
+                          <th>Learning Objectives</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Contemporary English -1</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Introduction to Fashion & Design</td>
+                          <td>
+                            History of Fashion, Fashion Movements, Elements &
+                            Principles of Design
+                          </td>
+                          <td>
+                            Understand the evolution of fashion & design
+                            concepts
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Textile Science & Fabric Study</td>
+                          <td>
+                            Types of Fibers, Weaving & Knitting, Textile
+                            Finishes
+                          </td>
+                          <td>
+                            Analysis different fabrics & their applications
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Fashion Illustration & Sketching</td>
+                          <td>
+                            Basic Sketching, Croquis, Rendering Techniques
+                          </td>
+                          <td>
+                            Develop hand-drawing skills for fashion concepts
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Pattern Making & Draping Techniques</td>
+                          <td>
+                            Basic Blocks, Dart Manipulation, Draping Principles
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Garment Construction Basics</td>
+                          <td>
+                            Sewing Machine Handling, Stitching Techniques, Seam
+                            Finishing
+                          </td>
+                          <td>Master sewing & construction techniques</td>
+                        </tr>
+                        <tr>
+                          <td>Project/Internship</td>
+                          <td>Fashion Portfolio Development</td>
+                          <td>
+                            Create a basic fashion portfolio with illustrations
+                            & fabric swatches
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Semester 2: Advanced Design Techniques & Fashion Technology
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#curriculumAccordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <strong>Focus:</strong> Digital Fashion, Advanced Textiles &
+                    Garment Construction
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-dark">
+                        <tr>
+                          <th>Subjects</th>
+                          <th>Topics Covered</th>
+                          <th>Learning Objectives</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Contemporary English -2</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Digital Fashion & CAD</td>
+                          <td>Adobe Illustrator, CLO3D, Browser</td>
+                          <td>
+                            Learn fashion CAD software for digital designing
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Advanced Pattern Making & Draping</td>
+                          <td>
+                            Complex Garment Structures, Sleeve & Collar
+                            Variations
+                          </td>
+                          <td>Develop advanced pattern & draping techniques</td>
+                        </tr>
+                        <tr>
+                          <td>Fashion Trends & Forecasting</td>
+                          <td>
+                            Fashion Cycles, Forecasting Agencies, Trend Boards
+                          </td>
+                          <td>
+                            Analyses fashion trends & predict consumer
+                            preferences
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Sustainable Fashion & Ethical Practices</td>
+                          <td>
+                            Eco-Friendly Fabrics, Upcycling, Ethical Sourcing
+                          </td>
+                          <td>
+                            Understand sustainability in fashion production
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Textile Surface Ornamentation</td>
+                          <td>Embroidery, Block Printing, Batik, Tie-Dye</td>
+                          <td>
+                            Learn traditional & modern textile enhancement
+                            techniques
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Project/Internship</td>
+                          <td>Digital Fashion Design Project</td>
+                          <td>Create 3D digital garments using CAD software</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Semester 3: Apparel Production, Retail & Merchandising
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#curriculumAccordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <strong>Focus:</strong> Industry Production & Business
+                    Aspects of Fashion
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-dark">
+                        <tr>
+                          <th>Subjects</th>
+                          <th>Topics Covered</th>
+                          <th>Learning Objectives</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Interactive Skills Part 1</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Apparel Production & Manufacturing</td>
+                          <td>
+                            Mass Production, Lean Manufacturing, Automation
+                          </td>
+                          <td>
+                            Learn factory-based apparel production techniques
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Retail Management & Visual Merchandising</td>
+                          <td>
+                            Store Layouts, Window Displays, Consumer Psychology
+                          </td>
+                          <td>
+                            Understand fashion retail & branding strategies
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Fashion Photography & Styling</td>
+                          <td>
+                            Editorial Styling, Photoshoots, Fashion Film Making
+                          </td>
+                          <td>Master styling & photography techniques</td>
+                        </tr>
+                        <tr>
+                          <td>Textile Dyeing & Printing Techniques</td>
+                          <td>Digital Printing, Natural Dyes, Reactive Dyes</td>
+                          <td>Gain expertise in textile processing methods</td>
+                        </tr>
+                        <tr>
+                          <td>Entrepreneurship & Fashion Business</td>
+                          <td>Business Models, Startups, Fashion Laws</td>
+                          <td>
+                            Learn business & startup strategies in fashion
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Project/Internship</td>
+                          <td>
+                            Retail Store Analysis & Fashion Marketing Strategy
+                          </td>
+                          <td>
+                            Work on a live project with a fashion brand or
+                            retailer
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  Semester 4: Couture Techniques & Fashion Technology
+                  Innovations
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#curriculumAccordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <strong>Focus:</strong> Advanced Design & Technology in
+                    Fashion
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-dark">
+                        <tr>
+                          <th>Subjects</th>
+                          <th>Topics Covered</th>
+                          <th>Learning Objectives</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Interactive Skills Part 2</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Couture Design & High-Fashion Construction</td>
+                          <td>Haute Couture, Hand Stitching, Luxury Fabrics</td>
+                          <td>Master couture garment techniques</td>
+                        </tr>
+                        <tr>
+                          <td>Fashion Technology & Smart Textiles</td>
+                          <td>
+                            Wearable Tech, Digital Printing, AI in Fashion
+                          </td>
+                          <td>Explore technology-driven fashion innovations</td>
+                        </tr>
+                        <tr>
+                          <td>Export & Global Fashion Market</td>
+                          <td>
+                            Trade Policies, Global Brands, Fashion Logistics
+                          </td>
+                          <td>Understand international fashion markets</td>
+                        </tr>
+                        <tr>
+                          <td>Fashion Show Planning & Event Management</td>
+                          <td>Backstage Management, Model Selection, PR</td>
+                          <td>
+                            Learn how to organize & execute fashion events
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Fashion Journalism & Content Creation</td>
+                          <td>
+                            Fashion Writing, Blogging, Social Media Trends
+                          </td>
+                          <td>
+                            Build expertise in fashion media & communication
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Project/Internship</td>
+                          <td>Couture Collection Development</td>
+                          <td>
+                            Design & present a mini haute couture collection
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  Semester 5: Advanced Industry Applications & Collection
+                  Development
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#curriculumAccordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <strong>Focus:</strong> Specialization & Industry-Ready
+                    Skills
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-dark">
+                        <tr>
+                          <th>Subjects</th>
+                          <th>Topics Covered</th>
+                          <th>Learning Objectives</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Personality Development</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Design Thinking & Innovation</td>
+                          <td>Problem Solving, Human-Centred Design</td>
+                          <td>Learn design innovation techniques</td>
+                        </tr>
+                        <tr>
+                          <td>Luxury Brand Management</td>
+                          <td>High-End Fashion, Luxury Consumer Behaviour</td>
+                          <td>Explore the luxury fashion business</td>
+                        </tr>
+                        <tr>
+                          <td>Footwear & Accessories Design</td>
+                          <td>Leather Goods, Jewellery, Bags</td>
+                          <td>Gain skills in accessory & footwear design</td>
+                        </tr>
+                        <tr>
+                          <td>Digital Marketing for Fashion Brands</td>
+                          <td>Social Media Ads, SEO, Influencer Marketing</td>
+                          <td>
+                            Understand fashion digital marketing strategies
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Portfolio Development & Resume Building</td>
+                          <td>Case Studies, Industry Projects</td>
+                          <td>Build a strong fashion portfolio</td>
+                        </tr>
+                        <tr>
+                          <td>Project/Internship</td>
+                          <td>Fashion Startup Incubation & Business Pitch</td>
+                          <td>Work on a startup idea & pitch to investors</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  Semester 6: Final Major Project & Industry Exposure
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSix"
+                data-bs-parent="#curriculumAccordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <strong>Focus:</strong> Capstone Collection & Career
+                    Readiness
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-dark">
+                        <tr>
+                          <th>Subjects</th>
+                          <th>Topics Covered</th>
+                          <th>Learning Objectives</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Interview Preparation & Essential Job Skills</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Personal Branding & Networking</td>
+                          <td>LinkedIn, Social Media Portfolio, PR</td>
+                          <td>
+                            Learn self-branding & career growth strategies
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>AI & Fashion Automation</td>
+                          <td>Generative AI in Design, AI-Powered Retail</td>
+                          <td>Explore AI applications in fashion</td>
+                        </tr>
+                        <tr>
+                          <td>Trend Forecasting & Future Fashion</td>
+                          <td>Virtual Fashion, Metaverse, Sustainability</td>
+                          <td>Learn about future fashion trends</td>
+                        </tr>
+                        <tr>
+                          <td>Business Strategy & Legal Aspects of Fashion</td>
+                          <td>Copyrights, Trademarks, IP</td>
+                          <td>Understand fashion law & regulations</td>
+                        </tr>
+                        <tr>
+                          <td>Industry Masterclass & Guest Lectures</td>
+                          <td>Talks by Designers, Entrepreneurs</td>
+                          <td>Gain first-hand industry insights</td>
+                        </tr>
+                        <tr>
+                          <td>Final Project/Internship</td>
+                          <td>Graduation Fashion Show & Thesis Collection</td>
+                          <td>Develop a signature collection & showcase it</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program Outcomes Section -->
+        <div class="row g-5 mt-5">
+          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+            <h3 class="mb-3">Program Outcomes (Aligned with NEP 2020)</h3>
+            <ul class="list-group">
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i
+                ><strong>Multidisciplinary Learning:</strong> Integration of
+                design, business, technology & sustainability
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i
+                ><strong>Industry-Ready Skills:</strong> Hands-on exposure
+                through internships, digital fashion & AI
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i
+                ><strong>Global Career Opportunities:</strong> Skills aligned
+                with international fashion standards
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i
+                ><strong>Entrepreneurial Development:</strong> Training for
+                fashion startups & business models
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fa fa-check text-primary me-2"></i
+                ><strong>Creative & Technical Mastery:</strong> Expertise in
+                design software, couture techniques & smart textiles
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================== END: NEW CONTENT ================== -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <!-- <h4 class="text-white mb-4">Get In Touch</h4> -->
+            <h2 class="text-primary mb-4">
+              <img src="img/logo.png" alt="" />
+            </h2>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>Corporate Office: Plot
+              no. 20, "Vihaan" Office No 201, Pimple Nilakh, Vishal Nagar, D P
+              Road, Pune - 411027
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i> +91 7888000951
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i> support@skillsupindia.com
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="index.html">Home</a>
+            <a class="btn btn-link" href="about.html">About us</a>
+            <a class="btn btn-link" href="admission.html">Admission</a>
+            <!-- <a class="btn btn-link" href="newsUpdate.html">News & Updates</a> -->
+            <a class="btn btn-link" href="contact.html">Contact</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Popular Links</h4>
+            <a class="btn btn-link" href="programOverview.html">Program</a>
+            <a class="btn btn-link" href="course.html">Courses</a>
+            <a class="btn btn-link" href="careerProspects.html">Career</a>
+            <a class="btn btn-link" href="facultyDetails.html">Faculty</a>
+            <a class="btn btn-link" href="studentLife.html">Student Life</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <!-- <h4 class="text-light mb-4">Newsletter</h4> -->
+            <form action="">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control p-3 border-0"
+                  placeholder="Your Email Address"
+                />
+                <button class="btn btn-primary">Sign Up</button>
+              </div>
+            </form>
+            <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-0" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div
+      class="container-fluid copyright text-light py-4 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            © <a href="#">Skills UP India</a>, All Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed By <a href="https://htmlcodex.com">GPT Software</a>
+            <!-- <br />Distributed By:
+              <a href="https://themewagon.com" target="_blank">name</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

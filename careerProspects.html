@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Skills Up India</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --ivory-white: #fffff5;
+        --faint-yellow: #fff9e6;
+        --gold-accent: #f3a600 !important;
+        --dark-charcoal: #333333;
+        --light-gray: #f5f5f5;
+        --text-gray: #555555;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-gray);
+        background-color: var(--ivory-white);
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        color: var(--dark-charcoal);
+      } */
+
+      .programs-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header Styles */
+      .programs-header {
+        background: linear-gradient(
+            rgba(255, 255, 245, 0.9),
+            rgba(255, 249, 230, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+            no-repeat center center;
+        background-size: cover;
+        padding: 120px 0 80px;
+        text-align: center;
+        position: relative;
+      }
+
+      .programs-header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background: linear-gradient(to right, var(--gold-accent), transparent);
+        opacity: 0.3;
+      }
+
+      .programs-main-title {
+        font-size: 3.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .programs-main-title::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        background: var(--gold-accent);
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .programs-intro-text {
+        max-width: 700px;
+        margin: 0 auto 30px;
+        font-size: 1.1rem;
+      }
+
+      /* Breadcrumb */
+      .programs-breadcrumb {
+        padding: 15px 0;
+        background-color: var(--faint-yellow);
+        border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+      }
+
+      .breadcrumb-list {
+        display: flex;
+        list-style: none;
+      }
+
+      .breadcrumb-item {
+        margin-right: 10px;
+        font-size: 0.9rem;
+      }
+
+      .breadcrumb-item:not(:last-child)::after {
+        content: "›";
+        margin-left: 10px;
+        color: var(--gold-accent);
+      }
+
+      .breadcrumb-link {
+        color: var(--text-gray);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .breadcrumb-link:hover {
+        color: var(--gold-accent);
+      }
+
+      /* Programs Filter */
+      .programs-filter-section {
+        padding: 40px 0;
+        background-color: var(--ivory-white);
+      }
+
+      .filter-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .filter-btn {
+        padding: 10px 25px;
+        background: transparent;
+        border: 1px solid var(--gold-accent);
+        border-radius: 30px;
+        color: var(--dark-charcoal);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--gold-accent);
+        color: white;
+      }
+
+      /* Programs Grid */
+      .programs-grid-section {
+        padding: 60px 0;
+        /* background-color: var(--faint-yellow); */
+      }
+
+      .programs-grid-title {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2.2rem;
+      }
+
+      .programs-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .program-card-uniq {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s ease;
+        position: relative;
+      }
+
+      .program-card-uniq:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .program-card-uniq::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--gold-accent);
+      }
+
+      .program-image-wrapper {
+        height: 220px;
+        overflow: hidden;
+      }
+
+      .program-img-uniq {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .program-card-uniq:hover .program-img-uniq {
+        transform: scale(1.05);
+      }
+
+      .program-content-box {
+        padding: 25px;
+      }
+
+      .program-title-special {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        color: var(--dark-charcoal);
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .program-title-special::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--gold-accent);
+      }
+
+      .program-description-custom {
+        margin-bottom: 20px;
+        color: var(--text-gray);
+      }
+
+      .program-details-list {
+        margin-bottom: 25px;
+      }
+
+      .program-detail-item {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .detail-icon-uniq {
+        color: #f39200 !important;
+        margin-right: 10px;
+        font-size: 0.9rem;
+        margin-top: 3px;
+      }
+
+      .program-cta-btn {
+        display: inline-block;
+        padding: 10px 25px;
+        background: #f38600 !important;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 1px solid var(--gold-accent);
+      }
+
+      .program-cta-btn:hover {
+        background: transparent;
+        color: var(--gold-accent);
+      }
+
+      /* Program Highlights */
+      .program-highlights-section {
+        padding: 80px 0;
+        /* background-color: var(--ivory-white); */
+      }
+
+      .highlight-container-flex {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .highlight-content-area {
+        flex: 1;
+      }
+
+      .highlight-visual-area {
+        flex: 1;
+        position: relative;
+      }
+
+      .highlight-main-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .highlight-main-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 70px;
+        height: 3px;
+        background: var(--gold-accent);
+      }
+
+      .highlight-point {
+        display: flex;
+        margin-bottom: 25px;
+      }
+
+       .highlight-icon-circle {
+        width: 50px;
+        height: 50px;
+        background: var(--faint-yellow);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        color: #FF8C00 !important;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+
+      .highlight-visual-area {
+        perspective: 1000px;
+      }
+
+      .floating-card-uniq {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        transform-style: preserve-3d;
+        animation: floatRotate 8s ease-in-out infinite;
+      }
+
+      @keyframes floatRotate {
+        0%,
+        100% {
+          transform: translateY(0) rotateY(-5deg);
+        }
+        50% {
+          transform: translateY(-20px) rotateY(5deg);
+        }
+      }
+
+      .floating-card-title {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        color: var(--gold-accent);
+      }
+
+      .floating-card-list {
+        list-style: none;
+      }
+
+      .floating-card-item {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .floating-card-item::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--gold-accent);
+        font-weight: bold;
+      }
+
+      /* Stats Section */
+      .program-stats-section {
+        padding: 60px 0;
+        background-color: var(--faint-yellow);
+        text-align: center;
+      }
+
+      .stats-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .stat-item-uniq {
+        padding: 30px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .stat-item-uniq:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--gold-accent);
+        margin-bottom: 10px;
+        font-family: "Playfair Display", serif;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        color: var(--text-gray);
+      }
+
+      
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .highlight-container-flex {
+          flex-direction: column;
+        }
+
+        .highlight-content-area,
+        .highlight-visual-area {
+          width: 100%;
+        }
+
+        .highlight-visual-area {
+          margin-top: 40px;
+        }
+
+        .programs-main-title {
+          font-size: 2.8rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .programs-main-title {
+          font-size: 2.2rem;
+        }
+
+        .programs-grid-container {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-title-gold {
+          font-size: 2rem;
+        }
+
+        .cta-btn-group {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .cta-btn-primary,
+        .cta-btn-secondary {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .programs-main-title {
+          font-size: 1.8rem;
+        }
+
+        .programs-header {
+          padding: 100px 0 60px;
+        }
+
+        .program-title-special {
+          font-size: 1.4rem;
+        }
+
+        .highlight-main-title {
+          font-size: 2rem;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 40px;
+      }
+
+      .career-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .career-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .career-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .career-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .career-content {
+        padding: 20px;
+      }
+
+      .career-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #b7bdc4;
+        margin-bottom: 10px;
+      }
+
+      .career-desc {
+        color: #555;
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+
+      /*  */
+      /* header {
+      background: linear-gradient(to right, #001f3f, #003366);
+      padding: 40px 20px;
+      color: white;
+      text-align: center;
+    } */
+
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      .containers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        font-size: 28px;
+        color: white;
+      }
+
+      .orange {
+        background-color: #e67e22;
+      }
+      .green {
+        background-color: #27ae60;
+      }
+      .blue {
+        background-color: #3498db;
+      }
+      .purple {
+        background-color: #9b59b6;
+      }
+      .lime {
+        background-color: #2ecc71;
+      }
+
+      .card h3 {
+        margin: 10px 0 5px;
+        color: #ff9900;
+      }
+
+      .card p {
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
+
+      .apply-btn {
+        margin-top: 15px;
+        display: inline-block;
+        padding: 10px 18px;
+        background: #ff8400;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      .apply-btn:hover {
+        background: #f4f5f7;
+      }
+
+      .industry-info {
+        background: #fff;
+        margin: 40px auto;
+        padding: 30px 20px;
+        border-radius: 15px;
+        max-width: 800px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .industry-info h2 {
+        color: #ff8c00;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .industry-info p {
+        margin: 10px 0;
+        font-size: 1em;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 600px) {
+        .icon-circle {
+          width: 50px;
+          height: 50px;
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small>
+            <small>
+              Office No 201, Pimple Nilakh, Pune
+              </small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <small class="far fa-clock text-primary me-2"></small>
+            <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+91 7888000951</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-square btn-link rounded-0" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+     <!-- Navbar Start -->
+     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
+      >
+        <!-- <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>Drivin</h2> -->
+        <h2><img src="img/logo.png" alt="" /></h2>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Programs</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="programOverview.html" class="dropdown-item"
+                >Program Overview</a
+              >
+              <a href="course.html" class="dropdown-item">Courses Offered</a>
+              
+              <a href="facultyDetails.html" class="dropdown-item"
+                >Faculty Details</a
+              >
+            </div>
+          </div>
+
+          <a href="admission.html" class="nav-item nav-link">Admission</a>
+          <a href="studentLife.html" class="nav-item nav-link">StudentLife</a>
+          <a href="industryCollaborations.html" class="nav-item nav-link"
+            >Industry </a
+          >
+          <!-- <a href="newsUpdate.html" class="nav-item nav-link">News</a> -->
+
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+        >Get Started<i class="fa fa-arrow-right ms-3"></i
+      ></a> -->
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center">
+        <h1 class="display-4 text-white animated slideInDown mb-4">
+          Career Prospects
+        </h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="#">Pages</a>
+            </li>
+            <li class="breadcrumb-item text-primary active" aria-current="page">
+              Career Prospects
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+    <!--Job Opportunities-->
+    <header>
+      <h1>Job Opportunities for Freshers</h1>
+    </header>
+
+    <div class="containers">
+      <div class="card">
+        <div class="icon-circle orange">👗</div>
+        <h3>Fashion Designer</h3>
+        <p>
+          Working with apparel brands, textile companies, or starting their own
+          label.
+        </p>
+        <a
+          href="https://example.com/apply-fashion-designer"
+          class="apply-btn"
+          target="_blank"
+          >Apply Now</a
+        >
+      </div>
+
+      <div class="card">
+        <div class="icon-circle green">🎨</div>
+        <h3>Fashion Illustrator</h3>
+        <p>Designing concepts and sketches for brands.</p>
+        <a
+          href="https://example.com/apply-fashion-illustrator"
+          class="apply-btn"
+          target="_blank"
+          >Apply Now</a
+        >
+      </div>
+
+      <div class="card">
+        <div class="icon-circle blue">🏬</div>
+        <h3>Merchandising Executive</h3>
+        <p>Managing retail and production strategies.</p>
+        <a
+          href="https://example.com/apply-merchandising"
+          class="apply-btn"
+          target="_blank"
+          >Apply Now</a
+        >
+      </div>
+
+      <div class="card">
+        <div class="icon-circle purple">🕊️</div>
+        <h3>Stylist</h3>
+        <p>Working in media, advertising, or personal styling.</p>
+        <a
+          href="https://example.com/apply-stylist"
+          class="apply-btn"
+          target="_blank"
+          >Apply Now</a
+        >
+      </div>
+
+      <div class="card">
+        <div class="icon-circle lime">🌱</div>
+        <h3>Sustainable Fashion</h3>
+        <p>Advising brands on eco-friendly design strategies.</p>
+        <a
+          href="https://example.com/apply-sustainable-fashion"
+          class="apply-btn"
+          target="_blank"
+          >Apply Now</a
+        >
+      </div>
+    </div>
+
+    <div class="industry-info">
+      <h2>📊 Salary & Industry Outlook</h2>
+      <p>
+        <strong>📈 Industry Growth:</strong> The Indian fashion industry is
+        expected to grow at a CAGR of 10–12% by 2030, with global expansion.
+      </p>
+      <p>
+        <strong>💰 Starting Salary:</strong> ₹3 – ₹5 LPA (varies based on
+        specialization and location).
+      </p>
+      <p>
+        <strong>🔮 Future Prospects:</strong> AI-powered design, fashion
+        marketing analytics, and sustainable innovations will lead the industry.
+      </p>
+    </div>
+
+    <!-- Features Start -->
+    <!-- <div class="container-xxl py-6">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="text-primary text-uppercase mb-2">
+              Our Design Programs
+            </h6>
+            <h1 class="display-6 mb-4">
+              Career prospects in software development continue to expand, with
+              high demand for skilled developers across industries.
+            </h1>
+            <p class="mb-5">
+              Opportunities range from web and mobile app development to AI,
+              cybersecurity, and cloud computing.
+            </p>
+            <div class="row gy-5 gx-4">
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="flex-shrink-0 btn-square bg-primary me-3">
+                    <i class="fa fa-check text-white"></i>
+                  </div>
+                  <h5 class="mb-0">Empowering Students –</h5>
+                </div>
+                <span
+                  >Provide world-class training and hands-on learning to develop
+                  industry-ready professionals in fashion, interiors, and
+                  technology.
+                </span>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="flex-shrink-0 btn-square bg-primary me-3">
+                    <i class="fa fa-check text-white"></i>
+                  </div>
+                  <h5 class="mb-0">Fostering Innovation –</h5>
+                </div>
+                <span
+                  >Cultivate a culture of creativity, technology-driven
+                  solutions, and forward-thinking design.
+                </span>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="flex-shrink-0 btn-square bg-primary me-3">
+                    <i class="fa fa-check text-white"></i>
+                  </div>
+                  <h5 class="mb-0">Bridging Industry & Academia –</h5>
+                </div>
+                <span
+                  >Build strong collaborations with leading brands, companies,
+                  and experts to offer real-world exposure.
+                </span>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="flex-shrink-0 btn-square bg-primary me-3">
+                    <i class="fa fa-check text-white"></i>
+                  </div>
+                  <h5 class="mb-0">Accelerating Careers –</h5>
+                </div>
+                <span
+                  >Offer cutting-edge programs, global certifications, and
+                  job-oriented skills to help students thrive in competitive
+                  markets.
+                </span>
+              </div>
+
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="flex-shrink-0 btn-square bg-primary me-3">
+                    <i class="fa fa-check text-white"></i>
+                  </div>
+                  <h5 class="mb-0">Sustaining Excellence –</h5>
+                </div>
+                <span
+                  >Continuously evolve our curriculum and teaching methodologies
+                  to keep pace with industry trends and emerging technologies.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div
+              class="position-relative overflow-hidden pe-5 pt-5 h-100"
+              style="min-height: 400px"
+            >
+              <img
+                class="position-absolute w-100 h-100"
+                src=""
+                alt=""
+                style="object-fit: cover"
+              />
+              <img
+                class="position-absolute top-0 end-0 bg-white ps-3 pb-3"
+                src=""
+                alt=""
+                style="width: 200px; height: 200px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Features End -->
+
+    <!-- Programs Grid -->
+    <section class="programs-grid-section">
+      <div class="programs-container">
+        <h2 class="programs-grid-title">Explore Our Design Programs</h2>
+
+        <div class="programs-grid-container">
+          <!-- Program 1 -->
+          <div class="program-card-uniq" data-category="undergraduate">
+            <div class="program-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt="Fashion Design"
+                class="program-img-uniq"
+              />
+            </div>
+            <div class="program-content-box">
+              <h3 class="program-title-special">Fashion Design</h3>
+              <p class="program-description-custom">
+                Our comprehensive fashion design program prepares students for
+                careers in the global fashion industry with hands-on training in
+                design, textiles, and merchandising.
+              </p>
+
+              <ul class="program-details-list">
+                <li class="program-detail-item">
+                  <i class="fas fa-clock detail-icon-uniq"></i>
+                  <span>4-Year Program</span>
+                </li>
+                <!-- <li class="program-detail-item">
+                  <i class="fas fa-graduation-cap detail-icon-uniq"></i>
+                  <span>Bachelor of Fine Arts</span>
+                </li>
+                <li class="program-detail-item">
+                  <i class="fas fa-map-marker-alt detail-icon-uniq"></i>
+                  <span>On-Campus</span>
+                </li> -->
+              </ul>
+
+              <a href="#" class="program-cta-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Program 2 -->
+          <div class="program-card-uniq" data-category="graduate">
+            <div class="program-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Interior Design"
+                class="program-img-uniq"
+              />
+            </div>
+            <div class="program-content-box">
+              <h3 class="program-title-special">Interior Architecture</h3>
+              <p class="program-description-custom">
+                Advanced study of interior spaces with emphasis on sustainable
+                design, spatial planning, and innovative materials for
+                residential and commercial environments.
+              </p>
+
+              <ul class="program-details-list">
+                <li class="program-detail-item">
+                  <i class="fas fa-clock detail-icon-uniq"></i>
+                  <span>2-Year Program</span>
+                </li>
+                <!-- <li class="program-detail-item">
+                  <i class="fas fa-graduation-cap detail-icon-uniq"></i>
+                  <span>Master of Design</span>
+                </li>
+                <li class="program-detail-item">
+                  <i class="fas fa-map-marker-alt detail-icon-uniq"></i>
+                  <span>On-Campus or Hybrid</span>
+                </li> -->
+              </ul>
+
+              <a href="#" class="program-cta-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Program 3 -->
+          <div class="program-card-uniq" data-category="undergraduate">
+            <div class="program-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Graphic Design"
+                class="program-img-uniq"
+              />
+            </div>
+            <div class="program-content-box">
+              <h3 class="program-title-special">Graphic Design</h3>
+              <p class="program-description-custom">
+                Develop visual communication skills through typography,
+                branding, digital media, and print design in this comprehensive
+                graphic design program.
+              </p>
+
+              <ul class="program-details-list">
+                <li class="program-detail-item">
+                  <i class="fas fa-clock detail-icon-uniq"></i>
+                  <span>4-Year Program</span>
+                </li>
+                <!-- <li class="program-detail-item">
+                  <i class="fas fa-graduation-cap detail-icon-uniq"></i>
+                  <span>Bachelor of Fine Arts</span>
+                </li>
+                <li class="program-detail-item">
+                  <i class="fas fa-map-marker-alt detail-icon-uniq"></i>
+                  <span>On-Campus</span>
+                </li> -->
+              </ul>
+
+              <a href="#" class="program-cta-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Program 4 -->
+          <div class="program-card-uniq" data-category="certificate">
+            <div class="program-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="UX/UI Design"
+                class="program-img-uniq"
+              />
+            </div>
+            <div class="program-content-box">
+              <h3 class="program-title-special">UX/UI Design Certificate</h3>
+              <p class="program-description-custom">
+                Intensive program focusing on user experience and interface
+                design principles, tools, and methodologies for digital
+                products.
+              </p>
+
+              <ul class="program-details-list">
+                <li class="program-detail-item">
+                  <i class="fas fa-clock detail-icon-uniq"></i>
+                  <span>6-Month Program</span>
+                </li>
+                <!-- <li class="program-detail-item">
+                  <i class="fas fa-graduation-cap detail-icon-uniq"></i>
+                  <span>Professional Certificate</span>
+                </li>
+                <li class="program-detail-item">
+                  <i class="fas fa-map-marker-alt detail-icon-uniq"></i>
+                  <span>Online or On-Campus</span>
+                </li> -->
+              </ul>
+
+              <a href="#" class="program-cta-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Program 5 -->
+          <div class="program-card-uniq" data-category="online">
+            <div class="program-image-wrapper">
+              <img
+                src="img/soft.jpg"
+                alt="Digital Marketing"
+                class="program-img-uniq"
+              />
+            </div>
+            <div class="program-content-box">
+              <h3 class="program-title-special">Software Development</h3>
+              <p class="program-description-custom">
+                Software development involves designing, coding, testing, and
+                maintaining applications to solve problems, improve efficiency,
+                and drive innovation.
+              </p>
+
+              <ul class="program-details-list">
+                <li class="program-detail-item">
+                  <i class="fas fa-clock detail-icon-uniq"></i>
+                  <span>6-Month Program</span>
+                </li>
+                <!-- <li class="program-detail-item">
+                  <i class="fas fa-graduation-cap detail-icon-uniq"></i>
+                  <span>Professional Certificate</span>
+                </li>
+                <li class="program-detail-item">
+                  <i class="fas fa-map-marker-alt detail-icon-uniq"></i>
+                  <span>100% Online</span>
+                </li> -->
+              </ul>
+
+              <a href="#" class="program-cta-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Program 6 -->
+          <!-- <div class="program-card-uniq" data-category="graduate">
+            <div class="program-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Design Management"
+                class="program-img-uniq"
+              />
+            </div>
+            <div class="program-content-box">
+              <h3 class="program-title-special">MFA in Design Management</h3>
+              <p class="program-description-custom">
+                Bridge the gap between design and business with this advanced
+                program focusing on leadership, strategy, and innovation in
+                design organizations.
+              </p>
+
+              <ul class="program-details-list">
+                <li class="program-detail-item">
+                  <i class="fas fa-clock detail-icon-uniq"></i>
+                  <span>2-Year Program</span>
+                </li>
+                <li class="program-detail-item">
+                  <i class="fas fa-graduation-cap detail-icon-uniq"></i>
+                  <span>Master of Fine Arts</span>
+                </li>
+                <li class="program-detail-item">
+                  <i class="fas fa-map-marker-alt detail-icon-uniq"></i>
+                  <span>On-Campus</span>
+                </li>
+              </ul>
+
+              <a href="#" class="program-cta-btn">Learn More</a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Highlights -->
+    <section class="program-highlights-section">
+      <div class="programs-container">
+        <div class="highlight-container-flex">
+          <div class="highlight-content-area">
+            <h2 class="highlight-main-title">Why Choose Our Programs</h2>
+
+            <div class="highlight-point">
+              <div class="highlight-icon-circle">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="highlight-text">
+                <h3>Industry-Recognized Credentials</h3>
+                <p>
+                  Our programs are accredited by leading design organizations
+                  and recognized by employers worldwide.
+                </p>
+              </div>
+            </div>
+
+            <div class="highlight-point">
+              <div class="highlight-icon-circle">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="highlight-text">
+                <h3>Career-Focused Curriculum</h3>
+                <p>
+                  Learn skills that are in high demand with our constantly
+                  updated curriculum designed with industry input.
+                </p>
+              </div>
+            </div>
+
+            <div class="highlight-point">
+              <div class="highlight-icon-circle">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="highlight-text">
+                <h3>Expert Faculty</h3>
+                <p>
+                  Learn from practicing designers and industry leaders who bring
+                  real-world experience to the classroom.
+                </p>
+              </div>
+            </div>
+
+            <div class="highlight-point">
+              <div class="highlight-icon-circle">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="highlight-text">
+                <h3>Industry Partnerships</h3>
+                <p>
+                  Gain access to internships and networking opportunities
+                  through our extensive industry connections.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-visual-area">
+            <div class="floating-card-uniq">
+              <h3 class="floating-card-title">Program Features</h3>
+              <ul class="floating-card-list">
+                <li class="floating-card-item">Hands-on studio courses</li>
+                <li class="floating-card-item">Portfolio development</li>
+                <li class="floating-card-item">Industry software training</li>
+                <li class="floating-card-item">Design thinking methodology</li>
+                <li class="floating-card-item">
+                  Professional practice preparation
+                </li>
+                <li class="floating-card-item">Study abroad opportunities</li>
+                <li class="floating-card-item">Senior capstone projects</li>
+                <li class="floating-card-item">Career placement assistance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <!-- <h4 class="text-white mb-4">Get In Touch</h4> -->
+            <h2 class="text-primary mb-4">
+              <img src="img/logo.png" alt="" />
+            </h2>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>Corporate Office: Plot
+              no. 20, "Vihaan" Office No 201, Pimple Nilakh, Vishal Nagar, D P
+              Road, Pune - 411027
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i> +91 7888000951
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"> </i> support@skillsupindia.com
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="index.html">Home</a>
+            <a class="btn btn-link" href="about.html">About us</a>
+            <a class="btn btn-link" href="admission.html">Admission</a>
+            <!-- <a class="btn btn-link" href="newsUpdate.html">News & Updates</a> -->
+            <a class="btn btn-link" href="contact.html">Contact</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Popular Links</h4>
+            <a class="btn btn-link" href="programOverview.html">Program</a>
+            <a class="btn btn-link" href="course.html">Courses</a>
+            <a class="btn btn-link" href="careerProspects.html">Career</a>
+            <a class="btn btn-link" href="facultyDetails.html">Faculty</a>
+            <a class="btn btn-link" href="studentLife.html">Student Life</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <!-- <h4 class="text-light mb-4">Newsletter</h4> -->
+            <form action="">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control p-3 border-0"
+                  placeholder="Your Email Address"
+                />
+                <button class="btn btn-primary">Sign Up</button>
+              </div>
+            </form>
+            <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-0" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div
+      class="container-fluid copyright text-light py-4 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a href="#">Skills UP India</a>, All Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed By <a href="https://htmlcodex.com">GPT Software</a>
+            <!-- <br />Distributed By:
+              <a href="https://themewagon.com" target="_blank">name</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
