@@ -6845,7 +6845,7 @@ fieldset:disabled .btn {
 }
 .bg-light {
   background-color: #f3f6f8 !important;
-  height: 120px;
+  height: max-content;
 }
 .bg-dark {
   background-color: #37474f !important;
