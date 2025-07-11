@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interior Design Industry Insights | SkillUp India</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Discover career scope, salaries, and future trends in India's booming Interior Design industry. Learn about in-demand skills like AutoCAD, SketchUp, and sustainable design."
+      name="description"
+    />
+    <meta
+      content="interior design career, interior design india, skillup india, 3d visualizer, furniture design, interior design courses"
+      name="keywords"
+    />
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- CREATIVE STYLES (from your example) -->
+    <style>
+      :root {
+        --primary-color: #ff8c00;
+        --secondary-color: #4ecdc4;
+        --dark-color: #2c3e50;
+        --light-gray-bg: #f8f9fa;
+        --white-color: #ffffff;
+        --heading-font: "Poppins", sans-serif;
+        --body-font: "Poppins", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--heading-font);
+        font-weight: 600;
+        color: var(--dark-color);
+      }
+      .text-primary {
+        color: var(--primary-color) !important;
+      }
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+      .btn-primary:hover {
+        background-color: #e05a5a;
+        border-color: #e05a5a;
+      }
+      .breadcrumb-item.active {
+        color: var(--primary-color) !important;
+      }
+      .insight-container {
+        padding: 6rem 0;
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      .section-title h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: var(--primary-color);
+        bottom: 0;
+        left: calc(50% - 40px);
+      }
+      .section-title p {
+        font-size: 1.1rem;
+        color: #6c757d;
+      }
+      .booming-section {
+        background-color: var(--light-gray-bg);
+        padding: 50px 0;
+      }
+      .booming-section .display-4 {
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+      .insight-card {
+        background: var(--white-color);
+        border: 1px solid #e9ecef;
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+      }
+      .insight-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .insight-card .icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+      .insight-card h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .career-table {
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+      .career-table thead {
+        background-color: var(--dark-color);
+        color: var(--white-color);
+        font-weight: 600;
+      }
+      .career-table th,
+      .career-table td {
+        padding: 1rem 1.5rem;
+        vertical-align: middle;
+      }
+      .career-table tbody tr:nth-child(even) {
+        background-color: var(--light-gray-bg);
+      }
+      .career-table td:nth-child(2) {
+        font-weight: 500;
+        color: var(--primary-color);
+      }
+      .styled-list {
+        list-style: none;
+        padding-left: 0;
+      }
+      .styled-list li {
+        padding: 12px 0 12px 40px;
+        position: relative;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #e9ecef;
+      }
+      .styled-list li:last-child {
+        border-bottom: none;
+      }
+      .styled-list li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 15px;
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+      }
+      .future-trends-section {
+        background: var(--dark-color);
+        color: var(--white-color);
+        border-radius: 15px;
+        padding: 4rem;
+      }
+      .future-trends-section h3,
+      .future-trends-section p {
+        color: var(--white-color);
+      }
+      .future-trends-section .styled-list li::before {
+        color: var(--primary-color);
+      }
+      .future-trends-section .styled-list li {
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Spinner, Topbar, Navbar -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small
+            ><small>Office No 201, Pimple Nilakh, Pune</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <small class="far fa-clock text-primary me-2"></small
+            ><small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small
+            ><small>+91 7888000951</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-facebook-f"></i></a
+            ><a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-twitter"></i></a
+            ><a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-linkedin-in"></i></a
+            ><a class="btn btn-square btn-link rounded-0" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
+        ><h2>
+          <img
+            src="img/logo.png"
+            alt="SkillUp India Logo"
+          /></h2></a
+      ><button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a
+          ><a href="about.html" class="nav-item nav-link">About</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Programs</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="programOverview.html" class="dropdown-item"
+                >Program Overview</a
+              ><a href="course.html" class="dropdown-item">Courses Offered</a
+              ><a href="facultyDetails.html" class="dropdown-item"
+                >Faculty Details</a
+              >
+            </div>
+          </div>
+          <a href="admission.html" class="nav-item nav-link">Admission</a
+          ><a href="studentLife.html" class="nav-item nav-link">Student Life</a
+          ><a
+            href="industryCollaborations.html"
+            class="nav-item nav-link active"
+            >Industry</a
+          ><a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center">
+        <h1 class="display-4 text-white animated slideInDown mb-4">
+          Designing Tomorrow's Spaces
+        </h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item text-primary active" aria-current="page">
+              Interior Design Insights
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Page Content Start -->
+    <div class="insight-container">
+      <div class="container">
+        <section
+          class="booming-section text-center mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="container">
+            <p class="text-secondary text-uppercase">
+              India’s Interior Design Market at a Glance
+            </p>
+            <h2 class="mb-4">A Creative Industry on the Rise</h2>
+            <div class="row justify-content-center">
+              <div class="col-md-5">
+                <p class="display-4">₹31,000+ Cr</p>
+                <p class="lead">Current Market Size</p>
+              </div>
+              <div class="col-md-5">
+                <p class="display-4">~7.5%</p>
+                <p class="lead">Annual Growth Rate (CAGR)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-5">
+          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+            <h2>Key Industry Drivers</h2>
+            <p>Understand the forces shaping the modern design landscape.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="insight-card">
+                <div class="icon"><i class="fas fa-home"></i></div>
+                <h4>Urban Housing Boom</h4>
+                <p>
+                  The rapid growth of cities and new housing projects creates
+                  constant demand for skilled designers.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="insight-card">
+                <div class="icon"><i class="fas fa-couch"></i></div>
+                <h4>Luxury & Modular Design</h4>
+                <p>
+                  A rising demand for luxury apartments, second homes, modular
+                  kitchens, and smart furniture.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="insight-card">
+                <div class="icon"><i class="fas fa-building"></i></div>
+                <h4>Commercial Redesign</h4>
+                <p>
+                  Businesses are investing heavily in redesigning commercial,
+                  office, and retail spaces.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-5 mt-5">
+          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+            <h2>Career Scope & Salaries</h2>
+            <p>Explore lucrative roles and the top sectors that are hiring.</p>
+          </div>
+          <div class="table-responsive wow fadeInUp" data-wow-delay="0.2s">
+            <table class="table career-table">
+              <thead>
+                <tr>
+                  <th>Career Path</th>
+                  <th>Average Starting Salary</th>
+                  <th>Top Hiring Sectors</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <i class="fas fa-drafting-compass me-2 text-muted"></i
+                    >Interior Designer
+                  </td>
+                  <td>₹3 – 6 LPA</td>
+                  <td>Home interiors, real estate firms</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-cube me-2 text-muted"></i>3D Visualizer
+                  </td>
+                  <td>₹2.5 – 5.5 LPA</td>
+                  <td>Architecture studios, tech startups</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-chair me-2 text-muted"></i>Furniture
+                    Designer
+                  </td>
+                  <td>₹3 – 6 LPA</td>
+                  <td>Modular kitchen brands, retail</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-lightbulb me-2 text-muted"></i>Lighting
+                    Consultant
+                  </td>
+                  <td>₹3 – 5.5 LPA</td>
+                  <td>Hospitality, corporate offices</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-handshake me-2 text-muted"></i>Freelance
+                    Consultant
+                  </td>
+                  <td>₹30k – ₹2L+/project</td>
+                  <td>Residential & commercial projects</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="py-5 mt-4">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+              <h3>Skills in High Demand</h3>
+              <p>
+                Master these skills to become an invaluable asset to any design
+                firm.
+              </p>
+              <ul class="styled-list">
+                <li>
+                  <strong>Software & Tools:</strong> AutoCAD, SketchUp, Revit,
+                  3ds Max, V-Ray, Lumion.
+                </li>
+                <li>
+                  <strong>Design Skills:</strong> Space planning, ergonomics,
+                  color theory & lighting design.
+                </li>
+                <li>
+                  <strong>Sustainability:</strong> Knowledge of sustainable
+                  materials & eco-friendly design.
+                </li>
+                <li>
+                  <strong>Business Skills:</strong> Project costing, budgeting &
+                  client communication.
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+              <div class="future-trends-section">
+                <h3>🌿 Future Trends in Design</h3>
+                <p>
+                  Stay ahead of the curve by embracing these upcoming trends.
+                </p>
+                <ul class="styled-list">
+                  <li>Smart homes & IoT integration in interiors.</li>
+                  <li>
+                    Eco-conscious designs using bamboo, cork, & recycled
+                    materials.
+                  </li>
+                  <li>Virtual walk-throughs using AR/VR technology.</li>
+                  <li>
+                    Rising demand for Vastu-based and cultural design elements.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Footer & Scripts -->
+    <div
+      class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Skill UP India</h4>
+            <div class="div" style="display: flex">
+              <i class="fa fa-map-marker-alt me-3" style="padding: 4px 0"></i>
+              <div style="padding-left: 10px">
+                Corporate Office: Plot no. 20, "Vihaan" Office No 201, D P Road,
+                Pune - 411027
+              </div>
+            </div>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i> +91 7888000951
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i> support@skillsupindia.com
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="index.html">Home</a
+            ><a class="btn btn-link" href="about.html">About us</a
+            ><a class="btn btn-link" href="admission.html">Admission</a
+            ><a class="btn btn-link" href="contact.html">Contact</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Popular Links</h4>
+            <a class="btn btn-link" href="programOverview.html">Program</a
+            ><a class="btn btn-link" href="course.html">Courses</a
+            ><a class="btn btn-link" href="careerProspects.html">Career</a
+            ><a class="btn btn-link" href="facultyDetails.html">Faculty</a
+            ><a class="btn btn-link" href="studentLife.html">Student Life</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <form action="">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control p-3 border-0"
+                  placeholder="Your Email Address"
+                /><button class="btn btn-primary">Sign Up</button>
+              </div>
+            </form>
+            <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-twitter"></i></a
+              ><a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-facebook-f"></i></a
+              ><a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-youtube"></i></a
+              ><a class="btn btn-square btn-outline-light me-0" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid copyright text-light py-4 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            © <a href="#">Skills UP India</a>, All Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            Designed By <a href="https://gptsoftwares.in">GPT Software</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
