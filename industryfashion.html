@@ -49,7 +49,7 @@
     ======================================================== -->
     <style>
       :root {
-        --primary-color: #FF8C00; /* A vibrant, energetic coral */
+        --primary-color: #ff8c00; /* A vibrant, energetic coral */
         --secondary-color: #4ecdc4; /* A cool, complementary teal */
         --dark-color: #2c3e50; /* A soft, modern black */
         --light-gray-bg: #f8f9fa;
@@ -58,9 +58,12 @@
         --body-font: "Poppins", sans-serif;
       }
 
-      
-
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         font-family: var(--heading-font);
         font-weight: 600;
         color: var(--dark-color);
@@ -78,7 +81,6 @@
         border-color: #e05a5a;
       }
 
-     
       .breadcrumb-item.active {
         color: var(--primary-color) !important;
       }
@@ -118,8 +120,8 @@
         padding: 50px 0;
       }
       .booming-section .display-4 {
-          font-weight: 700;
-          color: var(--primary-color);
+        font-weight: 700;
+        color: var(--primary-color);
       }
 
       .insight-card {
@@ -159,7 +161,8 @@
         color: var(--white-color);
         font-weight: 600;
       }
-      .career-table th, .career-table td {
+      .career-table th,
+      .career-table td {
         padding: 1rem 1.5rem;
         vertical-align: middle;
       }
@@ -195,23 +198,23 @@
         color: var(--secondary-color);
         font-size: 1.2rem;
       }
-      
+
       .future-trends-section {
-          background: var(--dark-color);
-          color: var(--white-color);
-          border-radius: 15px;
-          padding: 4rem;
+        background: var(--dark-color);
+        color: var(--white-color);
+        border-radius: 15px;
+        padding: 4rem;
       }
-      .future-trends-section h3, .future-trends-section p {
-          color: var(--white-color);
+      .future-trends-section h3,
+      .future-trends-section p {
+        color: var(--white-color);
       }
       .future-trends-section .styled-list li::before {
-          color: var(--primary-color);
+        color: var(--primary-color);
       }
       .future-trends-section .styled-list li {
-          border-color: rgba(255,255,255,0.2);
+        border-color: rgba(255, 255, 255, 0.2);
       }
-
     </style>
   </head>
 
@@ -229,109 +232,114 @@
     <!-- ... (Your existing topbar and navbar code remains here) ... -->
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark text-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-          <div class="col-lg-7 px-5 text-start">
-            <div class="h-100 d-inline-flex align-items-center me-4">
-              <small class="fa fa-map-marker-alt text-primary me-2"></small>
-              <small>Office No 201, Pimple Nilakh, Pune</small>
-            </div>
-            <div class="h-100 d-inline-flex align-items-center">
-              <small class="far fa-clock text-primary me-2"></small>
-              <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-            </div>
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small>
+            <small>Office No 201, Pimple Nilakh, Pune</small>
           </div>
-          <div class="col-lg-5 px-5 text-end">
-            <div class="h-100 d-inline-flex align-items-center me-4">
-              <small class="fa fa-phone-alt text-primary me-2"></small>
-              <small>+91 7888000951</small>
-            </div>
-            <div class="h-100 d-inline-flex align-items-center mx-n2">
-              <a
-                class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
-                href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
-                href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
-                href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a class="btn btn-square btn-link rounded-0" href=""
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <small class="far fa-clock text-primary me-2"></small>
+            <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+91 7888000951</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-square btn-link rounded-0" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </div>
       </div>
-      <!-- Topbar End -->
-  
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a
-          href="index.html"
-          class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
-        >
-          <!-- <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>Drivin</h2> -->
-          <h2><img src="img/logo.png" alt="SkillUp India Logo" style="max-height: 40px;"/></h2>
-        </a>
-        <button
-          type="button"
-          class="navbar-toggler me-4"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-  
-            <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                >Programs</a
-              >
-              <div class="dropdown-menu bg-light m-0">
-                <a href="programOverview.html" class="dropdown-item"
-                  >Program Overview</a
-                >
-                <a href="course.html" class="dropdown-item">Courses Offered</a>
-  
-                <a href="facultyDetails.html" class="dropdown-item"
-                  >Faculty Details</a
-                >
-              </div>
-            </div>
-  
-            <a href="admission.html" class="nav-item nav-link">Admission</a>
-            <a href="studentLife.html" class="nav-item nav-link">Student Life</a>
-            <a href="industryCollaborations.html" class="nav-item nav-link active"
-              >Industry</a
-            >
-            <!-- <a href="newsUpdate.html" class="nav-item nav-link">News</a> -->
-  
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
-          </div>
-        </div>
-      </nav>
-      <!-- Navbar End -->
+    </div>
+    <!-- Topbar End -->
 
- <!-- Page Header Start -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
+      >
+        <!-- <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>Drivin</h2> -->
+        <h2>
+          <img
+            src="img/logo.png"
+            alt="SkillUp India Logo"
+          />
+        </h2>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Programs</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="programOverview.html" class="dropdown-item"
+                >Program Overview</a
+              >
+              <a href="course.html" class="dropdown-item">Courses Offered</a>
+
+              <a href="facultyDetails.html" class="dropdown-item"
+                >Faculty Details</a
+              >
+            </div>
+          </div>
+
+          <a href="admission.html" class="nav-item nav-link">Admission</a>
+          <a href="studentLife.html" class="nav-item nav-link">Student Life</a>
+          <a href="industryCollaborations.html" class="nav-item nav-link active"
+            >Industry</a
+          >
+          <!-- <a href="newsUpdate.html" class="nav-item nav-link">News</a> -->
+
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
     <div
       class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn"
       data-wow-delay="0.1s"
     >
       <div class="container text-center">
         <h1 class="display-4 text-white animated slideInDown mb-4">
-         The Future of Fashion is Here
+          The Future of Fashion is Here
         </h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <ol class="breadcrumb justify-content-center mb-0">
@@ -355,133 +363,179 @@
     ======================================================== -->
     <div class="insight-container">
       <div class="container">
-        
         <!-- Section: A Booming Industry -->
-        <section class="booming-section text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <p class="text-secondary text-uppercase">The State of Fashion in India</p>
-                <h2 class="mb-4">A Booming Industry Awaiting Your Talent</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-5">
-                        <p class="display-4">₹48,000 Cr</p>
-                        <p class="lead">Current Industry Valuation</p>
-                    </div>
-                    <div class="col-md-5">
-                        <p class="display-4">10%</p>
-                        <p class="lead">Annual Growth Rate</p>
-                    </div>
-                </div>
-                <p class="mt-4 mx-auto" style="max-width: 800px;">
-                    With increasing demand for Indian and fusion wear, sustainable fashion, and digital-first brands, there has never been a better time to build a career in fashion.
-                </p>
+        <section
+          class="booming-section text-center mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="container">
+            <p class="text-secondary text-uppercase">
+              The State of Fashion in India
+            </p>
+            <h2 class="mb-4">A Booming Industry Awaiting Your Talent</h2>
+            <div class="row justify-content-center">
+              <div class="col-md-5">
+                <p class="display-4">₹48,000 Cr</p>
+                <p class="lead">Current Industry Valuation</p>
+              </div>
+              <div class="col-md-5">
+                <p class="display-4">10%</p>
+                <p class="lead">Annual Growth Rate</p>
+              </div>
             </div>
+            <p class="mt-4 mx-auto" style="max-width: 800px">
+              With increasing demand for Indian and fusion wear, sustainable
+              fashion, and digital-first brands, there has never been a better
+              time to build a career in fashion.
+            </p>
+          </div>
         </section>
 
         <!-- Section: Key Industry Highlights -->
         <section class="py-5">
-            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                <h2>Key Industry Highlights</h2>
-                <p>Understand the forces shaping the modern fashion landscape.</p>
+          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+            <h2>Key Industry Highlights</h2>
+            <p>Understand the forces shaping the modern fashion landscape.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="insight-card">
+                <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+                <h4>E-commerce Growth</h4>
+                <p>
+                  Platforms like Myntra & Ajio are driving mass recruitment and
+                  new designer collaborations.
+                </p>
+              </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="insight-card">
-                        <div class="icon"><i class="fas fa-shopping-cart"></i></div>
-                        <h4>E-commerce Growth</h4>
-                        <p>Platforms like Myntra & Ajio are driving mass recruitment and new designer collaborations.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="insight-card">
-                        <div class="icon"><i class="fas fa-globe-americas"></i></div>
-                        <h4>Global Demand</h4>
-                        <p>Indian textiles and designs are gaining worldwide attention, opening up export opportunities.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="insight-card">
-                        <div class="icon"><i class="fas fa-desktop"></i></div>
-                        <h4>Digital Transformation</h4>
-                        <p>It's about AI-driven design, 3D sampling, fashion tech, and powerful digital branding.</p>
-                    </div>
-                </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="insight-card">
+                <div class="icon"><i class="fas fa-globe-americas"></i></div>
+                <h4>Global Demand</h4>
+                <p>
+                  Indian textiles and designs are gaining worldwide attention,
+                  opening up export opportunities.
+                </p>
+              </div>
             </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="insight-card">
+                <div class="icon"><i class="fas fa-desktop"></i></div>
+                <h4>Digital Transformation</h4>
+                <p>
+                  It's about AI-driven design, 3D sampling, fashion tech, and
+                  powerful digital branding.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- Section: Career Opportunities -->
         <section class="py-5 mt-5">
-            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                <h2>Career Opportunities & Salaries</h2>
-                <p>Explore lucrative roles and the top brands that are hiring.</p>
-            </div>
-            <div class="table-responsive wow fadeInUp" data-wow-delay="0.2s">
-                <table class="table career-table">
-                  <thead>
-                    <tr>
-                      <th>Role</th>
-                      <th>Starting Salary (Per Year)</th>
-                      <th>Top Brands Hiring</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><i class="fas fa-paint-brush me-2 text-muted"></i> Fashion Designer</td>
-                      <td>₹3 – ₹7 LPA</td>
-                      <td>Biba, Fabindia, House of Masaba</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-user-tie me-2 text-muted"></i> Fashion Stylist</td>
-                      <td>₹2.5 – ₹5 LPA</td>
-                      <td>Styl.in, Nykaa, Freelance</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-palette me-2 text-muted"></i> Fashion Illustrator</td>
-                      <td>₹2 – ₹5 LPA</td>
-                      <td>Agencies, Designers</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-swatchbook me-2 text-muted"></i> Textile Designer</td>
-                      <td>₹3 – ₹6 LPA</td>
-                      <td>Raymond, Arvind Mills</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-rocket me-2 text-muted"></i> Fashion Entrepreneur</td>
-                      <td>Income Varies</td>
-                      <td>Shopify, Instagram Brands</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-        </section>
-        
-        <!-- Section: Skills & Trends -->
-        <section class="py-5 mt-4">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                    <h3>Skills in High Demand</h3>
-                    <p>Master these skills to become an invaluable asset to any fashion house.</p>
-                    <ul class="styled-list">
-                        <li><strong>Digital Design Tools:</strong> CLO 3D, TUKAtech, Adobe Creative Suite</li>
-                        <li><strong>Fashion Business:</strong> Merchandising, retail analytics, branding</li>
-                        <li><strong>Sustainability:</strong> Natural fabrics, slow fashion, zero-waste design</li>
-                        <li><strong>E-commerce Skills:</strong> Cataloging, visual storytelling, influencer marketing</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                   <div class="future-trends-section">
-                        <h3>🚀 The Future is Now</h3>
-                        <p>Stay ahead of the curve by embracing these upcoming trends.</p>
-                        <ul class="styled-list">
-                            <li>AI-assisted design and automation</li>
-                            <li>AR/VR try-ons and virtual showrooms</li>
-                            <li>Conscious buying & eco-friendly fashion</li>
-                            <li>Crossovers with tech, marketing, and media</li>
-                        </ul>
-                   </div>
-                </div>
-            </div>
+          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+            <h2>Career Opportunities & Salaries</h2>
+            <p>Explore lucrative roles and the top brands that are hiring.</p>
+          </div>
+          <div class="table-responsive wow fadeInUp" data-wow-delay="0.2s">
+            <table class="table career-table">
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Starting Salary (Per Year)</th>
+                  <th>Top Brands Hiring</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <i class="fas fa-paint-brush me-2 text-muted"></i> Fashion
+                    Designer
+                  </td>
+                  <td>₹3 – ₹7 LPA</td>
+                  <td>Biba, Fabindia, House of Masaba</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-user-tie me-2 text-muted"></i> Fashion
+                    Stylist
+                  </td>
+                  <td>₹2.5 – ₹5 LPA</td>
+                  <td>Styl.in, Nykaa, Freelance</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-palette me-2 text-muted"></i> Fashion
+                    Illustrator
+                  </td>
+                  <td>₹2 – ₹5 LPA</td>
+                  <td>Agencies, Designers</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-swatchbook me-2 text-muted"></i> Textile
+                    Designer
+                  </td>
+                  <td>₹3 – ₹6 LPA</td>
+                  <td>Raymond, Arvind Mills</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-rocket me-2 text-muted"></i> Fashion
+                    Entrepreneur
+                  </td>
+                  <td>Income Varies</td>
+                  <td>Shopify, Instagram Brands</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
+        <!-- Section: Skills & Trends -->
+        <section class="py-5 mt-4">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+              <h3>Skills in High Demand</h3>
+              <p>
+                Master these skills to become an invaluable asset to any fashion
+                house.
+              </p>
+              <ul class="styled-list">
+                <li>
+                  <strong>Digital Design Tools:</strong> CLO 3D, TUKAtech, Adobe
+                  Creative Suite
+                </li>
+                <li>
+                  <strong>Fashion Business:</strong> Merchandising, retail
+                  analytics, branding
+                </li>
+                <li>
+                  <strong>Sustainability:</strong> Natural fabrics, slow
+                  fashion, zero-waste design
+                </li>
+                <li>
+                  <strong>E-commerce Skills:</strong> Cataloging, visual
+                  storytelling, influencer marketing
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+              <div class="future-trends-section">
+                <h3>🚀 The Future is Now</h3>
+                <p>
+                  Stay ahead of the curve by embracing these upcoming trends.
+                </p>
+                <ul class="styled-list">
+                  <li>AI-assisted design and automation</li>
+                  <li>AR/VR try-ons and virtual showrooms</li>
+                  <li>Conscious buying & eco-friendly fashion</li>
+                  <li>Crossovers with tech, marketing, and media</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <!-- =======================================================
@@ -491,94 +545,95 @@
     <!-- Footer Start -->
     <!-- ... (Your existing footer code remains here) ... -->
     <div
-    class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn"
-    data-wow-delay="0.1s"
-  >
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
-          <h4 class="text-light mb-4">Skill UP India</h4>
+      class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Skill UP India</h4>
 
-          <div class="div" style="display: flex">
-            <i class="fa fa-map-marker-alt me-3" style="padding: 4px 0"></i>
-            <div style="padding-left: 10px">
-              Corporate Office: Plot no. 20, "Vihaan" Office No 201, D P Road,
-              Pune - 411027
+            <div class="div" style="display: flex">
+              <i class="fa fa-map-marker-alt me-3" style="padding: 4px 0"></i>
+              <div style="padding-left: 10px">
+                Corporate Office: Plot no. 20, "Vihaan" Office No 201, D P Road,
+                Pune - 411027
+              </div>
             </div>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i> +91 7888000951
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i> support@skillsupindia.com
+            </p>
           </div>
-          <p class="mb-2">
-            <i class="fa fa-phone-alt me-3"></i> +91 7888000951
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-envelope me-3"></i> support@skillsupindia.com
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h4 class="text-light mb-4">Quick Links</h4>
-          <a class="btn btn-link" href="index.html">Home</a>
-          <a class="btn btn-link" href="about.html">About us</a>
-          <a class="btn btn-link" href="admission.html">Admission</a>
-          <!-- <a class="btn btn-link" href="newsUpdate.html">News & Updates</a> -->
-          <a class="btn btn-link" href="contact.html">Contact</a>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h4 class="text-light mb-4">Popular Links</h4>
-          <a class="btn btn-link" href="programOverview.html">Program</a>
-          <a class="btn btn-link" href="course.html">Courses</a>
-          <a class="btn btn-link" href="careerProspects.html">Career</a>
-          <a class="btn btn-link" href="facultyDetails.html">Faculty</a>
-          <a class="btn btn-link" href="studentLife.html">Student Life</a>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <!-- <h4 class="text-light mb-4">Newsletter</h4> -->
-          <form action="">
-            <div class="input-group">
-              <input
-                type="text"
-                class="form-control p-3 border-0"
-                placeholder="Your Email Address"
-              />
-              <button class="btn btn-primary">Sign Up</button>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="index.html">Home</a>
+            <a class="btn btn-link" href="about.html">About us</a>
+            <a class="btn btn-link" href="admission.html">Admission</a>
+            <!-- <a class="btn btn-link" href="newsUpdate.html">News & Updates</a> -->
+            <a class="btn btn-link" href="contact.html">Contact</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Popular Links</h4>
+            <a class="btn btn-link" href="programOverview.html">Program</a>
+            <a class="btn btn-link" href="course.html">Courses</a>
+            <a class="btn btn-link" href="careerProspects.html">Career</a>
+            <a class="btn btn-link" href="facultyDetails.html">Faculty</a>
+            <a class="btn btn-link" href="studentLife.html">Student Life</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <!-- <h4 class="text-light mb-4">Newsletter</h4> -->
+            <form action="">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control p-3 border-0"
+                  placeholder="Your Email Address"
+                />
+                <button class="btn btn-primary">Sign Up</button>
+              </div>
+            </form>
+            <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-outline-light me-0" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
-          </form>
-          <h6 class="text-white mt-4 mb-3">Follow Us</h6>
-          <div class="d-flex pt-2">
-            <a class="btn btn-square btn-outline-light me-1" href=""
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a class="btn btn-square btn-outline-light me-1" href=""
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a class="btn btn-square btn-outline-light me-1" href=""
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a class="btn btn-square btn-outline-light me-0" href=""
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Footer End -->
+    <!-- Footer End -->
 
-  <!-- Copyright Start -->
-  <div
-    class="container-fluid copyright text-light py-4 wow fadeIn"
-    data-wow-delay="0.1s"
-  >
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          © <a href="#">Skills UP India</a>, All Right Reserved.
-        </div>
-        <div class="col-md-6 text-center text-md-end">
-          Designed with ❤️ by a creative AI.
+    <!-- Copyright Start -->
+    <div
+      class="container-fluid copyright text-light py-4 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            © <a href="#">Skills UP India</a>, All Right Reserved.
+          </div>
+         <div class="col-md-6 text-center text-md-end">
+            Designed By <a href="https://gptsoftwares.in">GPT Software</a>
+           
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Copyright End -->
+    <!-- Copyright End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
